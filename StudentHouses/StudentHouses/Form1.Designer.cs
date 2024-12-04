@@ -46,7 +46,7 @@
             this.loginButton.BackColor = System.Drawing.Color.Navy;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.loginButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.loginButton.Location = new System.Drawing.Point(170, 562);
+            this.loginButton.Location = new System.Drawing.Point(163, 572);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(199, 49);
             this.loginButton.TabIndex = 3;
@@ -57,7 +57,7 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(127, 364);
+            this.label.Location = new System.Drawing.Point(119, 365);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(48, 20);
             this.label.TabIndex = 5;
@@ -66,7 +66,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 443);
+            this.label1.Location = new System.Drawing.Point(119, 444);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 6;
@@ -91,9 +91,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(87, 47);
+            this.pictureBox2.Location = new System.Drawing.Point(94, 49);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(355, 284);
+            this.pictureBox2.Size = new System.Drawing.Size(338, 284);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -102,7 +102,7 @@
             // 
             this.showPassword.AutoSize = true;
             this.showPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.showPassword.Location = new System.Drawing.Point(131, 507);
+            this.showPassword.Location = new System.Drawing.Point(123, 508);
             this.showPassword.Name = "showPassword";
             this.showPassword.Size = new System.Drawing.Size(156, 21);
             this.showPassword.TabIndex = 9;
@@ -114,7 +114,7 @@
             // passwordBox
             // 
             this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.passwordBox.Location = new System.Drawing.Point(131, 466);
+            this.passwordBox.Location = new System.Drawing.Point(123, 467);
             this.passwordBox.Multiline = true;
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
@@ -125,7 +125,7 @@
             // loginBox
             // 
             this.loginBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.loginBox.Location = new System.Drawing.Point(131, 387);
+            this.loginBox.Location = new System.Drawing.Point(123, 388);
             this.loginBox.Multiline = true;
             this.loginBox.Name = "loginBox";
             this.loginBox.Size = new System.Drawing.Size(269, 35);
