@@ -39,7 +39,7 @@ namespace StudentHouses
                 admin.Show();
                 this.Hide();
             }
-            else if (loginAdmin == "Student" && passwordAdmin == "s123")
+            else if (loginAdmin == "Student" && passwordAdmin == "pas123")
             {
                 StudentForm student = new StudentForm();
                 student.Show();
