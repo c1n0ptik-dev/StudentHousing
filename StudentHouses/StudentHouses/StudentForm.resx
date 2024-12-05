@@ -117,4 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Upson signing your rental agreement you also agreed on signing the Terms and Conditions
+and the house rules stipulated in them. The house rules are in place to make sure everyone 
+has a pleasant, clean and safe stay during their time on our accommodation.
+A full overview of the house rules can be found in the Terms and Conditions.
+</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Besides the general house rules, try to become each other's favorite housemates and our
+favorite tenants by following these general rules. This way you will have a pleasant stay at
+our accommodation, so will your roommates and your neighbors.
+
+</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>We’re sorry to hear you are experiencing nuisance from your neighbors. We would like to assist you with
+this matter since everyone should havea pleasant stay in our residences. Please inform us about the nuisance
+you are experiencing as soon as possible. If the nuisance you are experiencing is severe and our office is closed,
+we advise you to inform the police by 0900 8844. According to Dutch law, it has to be quiet after 10 PM, 
+so do not hesitate to alert the police if the nuisance occurs after that time.</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>We understand you might want to bring your furry friend with you! However, for hygienic reasons, pets are
+not allowed in our Short Stay accommodation. We hope you can find someone to take care of your
+pet while you stay with us.
+</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>Nope.. smoking is strictly prohibited in all our accommodation! If you are caught smoking
+this might have severe consequences for you. And not just for your health... This by the way
+also includes all types of smoking; such as vaping, sisha, ect.</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>Understandable that you want to organize a gathering during your exchange period.
+Please note that it's fine to organize such gathering, but you cannot cause any nuisance
+and it should be quiet after 10 PM. To be sure, you can ask the SSH for permission at least
+5 working days in advance as stipulated in the Terms and Conditions.
+</value>
+  </data>
 </root>
