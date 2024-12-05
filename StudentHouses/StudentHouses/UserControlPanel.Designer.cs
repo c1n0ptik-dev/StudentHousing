@@ -1,6 +1,6 @@
 ﻿namespace StudentHouses
 {
-    partial class UserControlBlank
+    partial class UserControlPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,19 +34,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 57);
+            this.label1.Location = new System.Drawing.Point(60, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 20);
+            this.label1.Size = new System.Drawing.Size(48, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Temprorary text";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "HUIII";
             // 
-            // UserControlBlank
+            // UserControlPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
-            this.Name = "UserControlBlank";
+            this.Name = "UserControlPanel";
             this.Size = new System.Drawing.Size(183, 130);
             this.ResumeLayout(false);
             this.PerformLayout();

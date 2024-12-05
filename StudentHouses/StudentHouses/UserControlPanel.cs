@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace StudentHouses
 {
-    public partial class UserControlBlank : UserControl
+    public partial class UserControlPanel : UserControl
     {
-        public UserControlBlank()
+        public UserControlPanel()
         {
             InitializeComponent();
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
