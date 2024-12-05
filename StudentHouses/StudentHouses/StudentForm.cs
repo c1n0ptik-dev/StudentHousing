@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MySqlX.XDevAPI.Relational;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,7 @@ namespace StudentHouses
 {
     public partial class StudentForm : Form
     {
+        int month, year;
         public StudentForm()
         {
             InitializeComponent();
@@ -50,17 +53,35 @@ namespace StudentHouses
         private void Displays()
         {
             DateTime now = DateTime.Now;
-            DateTime startOfTheMonth = new DateTime(now.Year, now.Month, 1);
-            int daysInMonth = DateTime.DaysInMonth(now.Year, now.Month);
-            int dayOfTheWeek = (int)startOfTheMonth.DayOfWeek;
+            month = now.Month;
+            year = now.Year;
 
-            for (int i = 0; i < 5; i++)
+
+            string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            lblMandY.Text = monthName+" " + year;
+
+            DateTime startOfTheMonth = new DateTime(year, month, 1);
+            int daysInMonth = DateTime.DaysInMonth(year, month) + 1;
+            int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
+
+            for (int i = 0; i < dayOfTheWeek; i++)
             {
                 UserControlPanel ucblank = new UserControlPanel();
-                this.Controls.Add(daysContainer);
+                daysContainer.Controls.Add(ucblank);
             }
 
-            daysContainer.Refresh();
+            for (int i = 1; i < daysInMonth; i++)
+            {
+                UserControlDays ucdays = new UserControlDays();
+                ucdays.Days(i);
+                daysContainer.Controls.Add(ucdays);
+            }
+
+
+
+
+
+
         }
 
 
@@ -76,6 +97,73 @@ namespace StudentHouses
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            if (!AcceptTC.Checked)
+            {
+                MessageBox.Show("You need to accept the T and C");
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            daysContainer.Controls.Clear();
+
+            month--;
+
+            string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            lblMandY.Text = monthName + " " + year;
+
+            DateTime startOfTheMonth = new DateTime(year, month, 1);
+            int daysInMonth = DateTime.DaysInMonth(year, month) + 1;
+            int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
+
+            for (int i = 0; i < dayOfTheWeek; i++)
+            {
+                UserControlPanel ucblank = new UserControlPanel();
+                daysContainer.Controls.Add(ucblank);
+            }
+
+            for (int i = 1; i < daysInMonth; i++)
+            {
+                UserControlDays ucdays = new UserControlDays();
+                ucdays.Days(i);
+                daysContainer.Controls.Add(ucdays);
+            }
+
+
+        }
+
+        private void btnForward_Click(object sender, EventArgs e)
+        {
+            daysContainer.Controls.Clear();
+
+            month++;
+
+            string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            lblMandY.Text = monthName + " " + year;
+
+            DateTime startOfTheMonth = new DateTime(year, month, 1);
+            int daysInMonth = DateTime.DaysInMonth(year, month) + 1;
+            int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
+
+            for (int i = 0; i < dayOfTheWeek; i++)
+            {
+                UserControlPanel ucblank = new UserControlPanel();
+                daysContainer.Controls.Add(ucblank);
+            }
+
+            for (int i = 1; i < daysInMonth; i++)
+            {
+                UserControlDays ucdays = new UserControlDays();
+                ucdays.Days(i);
+                daysContainer.Controls.Add(ucdays);
+            }
+
+
         }
     }
 }
