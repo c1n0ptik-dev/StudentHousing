@@ -14,10 +14,8 @@ namespace StudentHouses
     {
         public StudentForm()
         {
-            InitializeComponent(); 
-            
-
-
+            InitializeComponent();
+            Displays();
         }
         private void StudentForm_Load(object sender, EventArgs e)
         {
@@ -63,12 +61,12 @@ namespace StudentHouses
             }
 
             // Add UserControl for each day of the month
-            for (int day = 1; day <= daysInMonth; day++)
-            {
-                UserControlBlank ucDay = new UserControlBlank();  // Assuming UserControlDay is the control that displays the day number
-                ucDay.SetDay(day);  // Set the actual day number on the control
-                daysContainer.Controls.Add(ucDay);
-            }
+            //for (int day = 1; day <= daysInMonth; day++)
+            //{
+            //    UserControlBlank ucDay = new UserControlBlank();  // Assuming UserControlDay is the control that displays the day number
+            //    ucDay.SetDay(day);  // Set the actual day number on the control
+            //    daysContainer.Controls.Add(ucDay);
+            // }
         }
 
 
@@ -84,8 +82,6 @@ namespace StudentHouses
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UserControlBlank ucblank = new UserControlBlank();
-            daysContainer.Controls.Add(ucblank);
         }
     }
 }
