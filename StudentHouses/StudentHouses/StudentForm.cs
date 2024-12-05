@@ -112,7 +112,15 @@ namespace StudentHouses
         {
             daysContainer.Controls.Clear();
 
-            month--;
+            if (month == 1)
+            {
+                month = 12;
+                year--;
+            }
+            else
+            {
+                month--;
+            }
 
             string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lblMandY.Text = monthName + " " + year;
@@ -141,7 +149,16 @@ namespace StudentHouses
         {
             daysContainer.Controls.Clear();
 
-            month++;
+            if (month == 12)
+            {
+                month = 1;
+                year++;
+            }
+            else
+            {
+                month++;
+            }
+
 
             string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lblMandY.Text = monthName + " " + year;
