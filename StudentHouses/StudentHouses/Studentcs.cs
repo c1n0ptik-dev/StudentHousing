@@ -1,17 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace StudentHouses
 {
-    internal class Studentcs
-    {
+        [DataContract]
+        public class Studentcs
+        {
+        [DataMember]
         string name;
+        [DataMember]
         int roomNumber;
+        [DataMember]
         int studentId;
+        [DataMember]
         string studentEmail;
+        [DataMember]
+        bool bannedForComplaints = false;
+        [DataMember]
         List<Announcements> studentAnnouncements = new List<Announcements>();
 
         public Studentcs(string nameS, int roomN, int studentID, string email)
@@ -20,6 +29,17 @@ namespace StudentHouses
             this.roomNumber = roomN;
             this.studentId = studentID;
             this.studentEmail = email;
+        }
+
+
+        public void ChangeBan(bool changes)
+        {
+            this.bannedForComplaints = changes;
+        }
+
+        public bool Banned()
+        {
+            return bannedForComplaints;
         }
 
         public string GetStudent()
