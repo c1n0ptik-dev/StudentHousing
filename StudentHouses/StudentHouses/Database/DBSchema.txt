@@ -1,0 +1,10 @@
+CREATE TABLE Users (
+    StudentId           INTEGER PRIMARY KEY AUTOINCREMENT,
+    Username            STRING  NOT NULL,
+    Password            STRING  NOT NULL,
+    Name                STRING  NOT NULL,
+    RoomNumber          INTEGER NOT NULL,
+    StudentEmail        STRING,
+    BannedForComplaints BOOLEAN DEFAULT (False) 
+                                NOT NULL
+);

@@ -15,35 +15,40 @@ namespace StudentHouses
 {
     public partial class Form1 : Form
     {
+        private DatabaseHelper dbHelper;
+
         public Form1()
         {
             InitializeComponent();
+            dbHelper = new DatabaseHelper();
 
-          
+
             loginButton.FlatStyle = FlatStyle.Flat;
             loginButton.FlatAppearance.BorderSize = 0;
             loginButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-
 
             passwordBox.PasswordChar = '*';
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            string loginAdmin = loginBox.Text;
-            string passwordAdmin = passwordBox.Text;
+            string username = loginBox.Text.Trim();
+            string password = passwordBox.Text.Trim();
 
-            if (loginAdmin == "Admin" && passwordAdmin == "pas123")
+            if (dbHelper.VerifyUser(username, password))
             {
-                AdminForm admin = new AdminForm();
-                admin.Show();
-                this.Hide();
-            }
-            else if (loginAdmin == "Student" && passwordAdmin == "pas123")
-            {
-                StudentForm student = new StudentForm();
-                student.Show();
-                this.Hide();
+                if (dbHelper.VerifyAdmin(username, password))
+                {
+                    AdminForm admin = new AdminForm();
+                    admin.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    StudentForm student = new StudentForm();
+                    student.Show();
+                    this.Hide();
+                }
             }
             else
             {

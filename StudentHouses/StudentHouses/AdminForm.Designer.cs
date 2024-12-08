@@ -84,12 +84,28 @@
             this.AcceptTC = new System.Windows.Forms.CheckBox();
             this.loginButton = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.complaintsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnForward = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.complaintsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.UsernameBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.PasswordBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.FullNameBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.RoomNumBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.EmailBox = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.IsAdminBox = new System.Windows.Forms.TextBox();
             this.tabPage5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -100,6 +116,8 @@
             this.groupBox1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage5
@@ -107,9 +125,8 @@
             this.tabPage5.BackColor = System.Drawing.Color.Azure;
             this.tabPage5.Controls.Add(this.groupBox4);
             this.tabPage5.Location = new System.Drawing.Point(4, 33);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1038, 604);
+            this.tabPage5.Size = new System.Drawing.Size(1327, 949);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Add Student Chores";
             // 
@@ -126,11 +143,9 @@
             this.groupBox4.Controls.Add(this.label38);
             this.groupBox4.Controls.Add(this.checkBox2);
             this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Location = new System.Drawing.Point(43, 92);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Location = new System.Drawing.Point(64, 142);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(871, 494);
+            this.groupBox4.Size = new System.Drawing.Size(1306, 760);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             // 
@@ -146,10 +161,9 @@
             "Cooking dinner",
             "Cleaning bathrooms",
             "Clean all kitchen countertops"});
-            this.comboBox2.Location = new System.Drawing.Point(23, 204);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox2.Location = new System.Drawing.Point(34, 314);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(323, 25);
+            this.comboBox2.Size = new System.Drawing.Size(482, 25);
             this.comboBox2.TabIndex = 23;
             // 
             // comboBox1
@@ -164,18 +178,16 @@
             "Cooking dinner",
             "Cleaning bathrooms",
             "Clean all kitchen countertops"});
-            this.comboBox1.Location = new System.Drawing.Point(25, 122);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Location = new System.Drawing.Point(38, 188);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(323, 25);
+            this.comboBox1.Size = new System.Drawing.Size(482, 25);
             this.comboBox1.TabIndex = 22;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(20, 245);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Location = new System.Drawing.Point(30, 377);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(122, 26);
             this.label33.TabIndex = 21;
@@ -183,11 +195,10 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(23, 278);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox5.Location = new System.Drawing.Point(34, 428);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(827, 93);
+            this.textBox5.Size = new System.Drawing.Size(1238, 141);
             this.textBox5.TabIndex = 20;
             this.textBox5.Text = "Description";
             // 
@@ -195,8 +206,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(19, 165);
-            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label35.Location = new System.Drawing.Point(28, 254);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(217, 26);
             this.label35.TabIndex = 17;
@@ -206,8 +216,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(19, 89);
-            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label36.Location = new System.Drawing.Point(28, 137);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(123, 26);
             this.label36.TabIndex = 14;
@@ -216,10 +225,9 @@
             // label37
             // 
             this.label37.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(21, 56);
-            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label37.Location = new System.Drawing.Point(32, 86);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(775, 30);
+            this.label37.Size = new System.Drawing.Size(1162, 46);
             this.label37.TabIndex = 12;
             this.label37.Text = "Enter the information below to aler administration and other students about the e" +
     "cents you are hosting";
@@ -228,8 +236,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label38.Location = new System.Drawing.Point(341, 17);
-            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label38.Location = new System.Drawing.Point(512, 26);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(204, 26);
             this.label38.TabIndex = 11;
@@ -239,8 +246,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox2.Location = new System.Drawing.Point(24, 390);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox2.Location = new System.Drawing.Point(36, 600);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(211, 19);
             this.checkBox2.TabIndex = 10;
@@ -253,10 +259,9 @@
             this.button3.BackColor = System.Drawing.Color.Navy;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(329, 415);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(494, 638);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(211, 38);
+            this.button3.Size = new System.Drawing.Size(316, 58);
             this.button3.TabIndex = 3;
             this.button3.Text = "Submit";
             this.button3.UseVisualStyleBackColor = false;
@@ -266,9 +271,8 @@
             this.tabPage4.BackColor = System.Drawing.Color.Azure;
             this.tabPage4.Controls.Add(this.groupBox3);
             this.tabPage4.Location = new System.Drawing.Point(4, 33);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1038, 604);
+            this.tabPage4.Size = new System.Drawing.Size(1327, 949);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Book Space";
             // 
@@ -287,11 +291,9 @@
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Controls.Add(this.checkBox3);
             this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Location = new System.Drawing.Point(37, 51);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(56, 78);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(879, 573);
+            this.groupBox3.Size = new System.Drawing.Size(1318, 882);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             // 
@@ -299,8 +301,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(20, 350);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Location = new System.Drawing.Point(30, 538);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(122, 26);
             this.label32.TabIndex = 21;
@@ -308,11 +309,10 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(25, 389);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Location = new System.Drawing.Point(38, 598);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(827, 93);
+            this.textBox4.Size = new System.Drawing.Size(1238, 141);
             this.textBox4.TabIndex = 20;
             this.textBox4.Text = "Description";
             // 
@@ -320,8 +320,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(20, 256);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Location = new System.Drawing.Point(30, 394);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(107, 26);
             this.label31.TabIndex = 19;
@@ -329,11 +328,10 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(25, 294);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Location = new System.Drawing.Point(38, 452);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(827, 41);
+            this.textBox3.Size = new System.Drawing.Size(1238, 61);
             this.textBox3.TabIndex = 18;
             this.textBox3.Text = "Enter the name of the host...";
             // 
@@ -341,8 +339,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(19, 165);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Location = new System.Drawing.Point(28, 254);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(163, 26);
             this.label30.TabIndex = 17;
@@ -350,18 +347,16 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(23, 123);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(34, 189);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(396, 23);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(19, 89);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Location = new System.Drawing.Point(28, 137);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(60, 26);
             this.label27.TabIndex = 14;
@@ -369,21 +364,19 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(23, 203);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Location = new System.Drawing.Point(34, 312);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(827, 41);
+            this.textBox2.Size = new System.Drawing.Size(1238, 61);
             this.textBox2.TabIndex = 13;
             this.textBox2.Text = "Enter the room number...";
             // 
             // label28
             // 
             this.label28.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.Location = new System.Drawing.Point(21, 56);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Location = new System.Drawing.Point(32, 86);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(775, 30);
+            this.label28.Size = new System.Drawing.Size(1162, 46);
             this.label28.TabIndex = 12;
             this.label28.Text = "Enter the information below to aler administration and other students about the e" +
     "cents you are hosting";
@@ -392,8 +385,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label29.Location = new System.Drawing.Point(345, 17);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Location = new System.Drawing.Point(518, 26);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(163, 26);
             this.label29.TabIndex = 11;
@@ -403,8 +395,7 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox3.Location = new System.Drawing.Point(24, 498);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox3.Location = new System.Drawing.Point(36, 766);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(211, 19);
             this.checkBox3.TabIndex = 10;
@@ -417,10 +408,9 @@
             this.button2.BackColor = System.Drawing.Color.Navy;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(329, 521);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(494, 802);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 38);
+            this.button2.Size = new System.Drawing.Size(316, 58);
             this.button2.TabIndex = 3;
             this.button2.Text = "Submit";
             this.button2.UseVisualStyleBackColor = false;
@@ -433,9 +423,8 @@
             this.tabPage3.Controls.Add(this.label26);
             this.tabPage3.Controls.Add(this.label25);
             this.tabPage3.Location = new System.Drawing.Point(4, 33);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1038, 604);
+            this.tabPage3.Size = new System.Drawing.Size(1327, 949);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Rules";
             // 
@@ -456,11 +445,9 @@
             this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Location = new System.Drawing.Point(36, 24);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(54, 37);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(872, 876);
+            this.groupBox2.Size = new System.Drawing.Size(1308, 1348);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             // 
@@ -468,7 +455,8 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(13, 29);
+            this.label11.Location = new System.Drawing.Point(20, 45);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(200, 26);
             this.label11.TabIndex = 0;
@@ -478,8 +466,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(14, 60);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(21, 92);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(624, 80);
             this.label12.TabIndex = 1;
@@ -489,7 +476,8 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(13, 153);
+            this.label13.Location = new System.Drawing.Point(20, 235);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(158, 26);
             this.label13.TabIndex = 2;
@@ -499,8 +487,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(15, 784);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Location = new System.Drawing.Point(22, 1206);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(612, 80);
             this.label23.TabIndex = 13;
@@ -510,8 +497,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(14, 188);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(21, 289);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(609, 80);
             this.label14.TabIndex = 3;
@@ -521,7 +507,8 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(13, 748);
+            this.label24.Location = new System.Drawing.Point(20, 1151);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(230, 26);
             this.label24.TabIndex = 12;
@@ -531,7 +518,8 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(13, 266);
+            this.label15.Location = new System.Drawing.Point(20, 409);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(632, 26);
             this.label15.TabIndex = 4;
@@ -541,8 +529,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(14, 671);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Location = new System.Drawing.Point(21, 1032);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(620, 60);
             this.label21.TabIndex = 11;
@@ -552,8 +539,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(14, 302);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(21, 465);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(756, 100);
             this.label16.TabIndex = 5;
@@ -563,7 +549,8 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(13, 632);
+            this.label22.Location = new System.Drawing.Point(20, 972);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(137, 26);
             this.label22.TabIndex = 10;
@@ -573,7 +560,8 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(13, 410);
+            this.label17.Location = new System.Drawing.Point(20, 631);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(188, 26);
             this.label17.TabIndex = 6;
@@ -583,8 +571,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(14, 558);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(21, 858);
             this.label19.Name = "label19";
             this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label19.Size = new System.Drawing.Size(724, 60);
@@ -595,8 +582,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(14, 450);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(21, 692);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(552, 60);
             this.label18.TabIndex = 7;
@@ -608,7 +594,8 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(13, 519);
+            this.label20.Location = new System.Drawing.Point(20, 798);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label20.Size = new System.Drawing.Size(201, 26);
@@ -618,8 +605,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(17, 944);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Location = new System.Drawing.Point(26, 1452);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(358, 17);
             this.label26.TabIndex = 15;
@@ -628,8 +614,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(17, 906);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Location = new System.Drawing.Point(26, 1394);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(202, 17);
             this.label25.TabIndex = 14;
@@ -640,10 +625,9 @@
             this.tabPage2.BackColor = System.Drawing.Color.Azure;
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1038, 604);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(1327, 949);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Complaints";
             // 
@@ -657,11 +641,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.AcceptTC);
             this.groupBox1.Controls.Add(this.loginButton);
-            this.groupBox1.Location = new System.Drawing.Point(42, 91);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(46, 50);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(879, 488);
+            this.groupBox1.Size = new System.Drawing.Size(1226, 751);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
@@ -669,8 +651,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox1.Location = new System.Drawing.Point(241, 398);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox1.Location = new System.Drawing.Point(362, 612);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(140, 19);
             this.checkBox1.TabIndex = 15;
@@ -682,8 +663,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 89);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(28, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(202, 26);
             this.label4.TabIndex = 14;
@@ -691,21 +671,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 122);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(36, 188);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(841, 267);
+            this.textBox1.Size = new System.Drawing.Size(1137, 409);
             this.textBox1.TabIndex = 13;
             this.textBox1.Text = "Enter the complaint...";
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(21, 59);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(32, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(775, 30);
+            this.label3.Size = new System.Drawing.Size(1162, 46);
             this.label3.TabIndex = 12;
             this.label3.Text = "Keep in mind that the form is not anonymous administration always can trace back " +
     "the complain to student account";
@@ -714,8 +692,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(345, 17);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(518, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 26);
             this.label2.TabIndex = 11;
@@ -725,8 +702,7 @@
             // 
             this.AcceptTC.AutoSize = true;
             this.AcceptTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AcceptTC.Location = new System.Drawing.Point(24, 398);
-            this.AcceptTC.Margin = new System.Windows.Forms.Padding(2);
+            this.AcceptTC.Location = new System.Drawing.Point(36, 612);
             this.AcceptTC.Name = "AcceptTC";
             this.AcceptTC.Size = new System.Drawing.Size(211, 19);
             this.AcceptTC.TabIndex = 10;
@@ -739,10 +715,9 @@
             this.loginButton.BackColor = System.Drawing.Color.Navy;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.loginButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.loginButton.Location = new System.Drawing.Point(329, 435);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(2);
+            this.loginButton.Location = new System.Drawing.Point(479, 668);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(211, 38);
+            this.loginButton.Size = new System.Drawing.Size(316, 58);
             this.loginButton.TabIndex = 3;
             this.loginButton.Text = "Submit complaint";
             this.loginButton.UseVisualStyleBackColor = false;
@@ -756,22 +731,43 @@
             this.tabPage1.Controls.Add(this.btnForward);
             this.tabPage1.ForeColor = System.Drawing.Color.Azure;
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(882, 604);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(1327, 949);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Manage complaints";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(428, 51);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(283, 35);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Complaints manager";
+            // 
+            // complaintsPanel
+            // 
+            this.complaintsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.complaintsPanel.ForeColor = System.Drawing.Color.Black;
+            this.complaintsPanel.Location = new System.Drawing.Point(69, 157);
+            this.complaintsPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.complaintsPanel.Name = "complaintsPanel";
+            this.complaintsPanel.Size = new System.Drawing.Size(1170, 582);
+            this.complaintsPanel.TabIndex = 11;
+            this.complaintsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.complaintsPanel_Paint);
             // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F);
             this.btnBack.ForeColor = System.Drawing.Color.Black;
-            this.btnBack.Location = new System.Drawing.Point(701, 666);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Location = new System.Drawing.Point(1052, 1025);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(93, 28);
+            this.btnBack.Size = new System.Drawing.Size(140, 43);
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "←";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -780,10 +776,9 @@
             // 
             this.btnForward.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F);
             this.btnForward.ForeColor = System.Drawing.Color.Black;
-            this.btnForward.Location = new System.Drawing.Point(798, 666);
-            this.btnForward.Margin = new System.Windows.Forms.Padding(2);
+            this.btnForward.Location = new System.Drawing.Point(1197, 1025);
             this.btnForward.Name = "btnForward";
-            this.btnForward.Size = new System.Drawing.Size(91, 28);
+            this.btnForward.Size = new System.Drawing.Size(136, 43);
             this.btnForward.TabIndex = 9;
             this.btnForward.Text = "→";
             this.btnForward.UseVisualStyleBackColor = true;
@@ -792,6 +787,7 @@
             // 
             this.tabControl1.CausesValidation = false;
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
@@ -800,10 +796,10 @@
             this.tabControl1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.tabControl1.ItemSize = new System.Drawing.Size(100, 29);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(890, 641);
+            this.tabControl1.Size = new System.Drawing.Size(1335, 986);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 1;
             // 
@@ -813,33 +809,178 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // complaintsPanel
+            // tabPage6
             // 
-            this.complaintsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.complaintsPanel.ForeColor = System.Drawing.Color.Black;
-            this.complaintsPanel.Location = new System.Drawing.Point(46, 102);
-            this.complaintsPanel.Name = "complaintsPanel";
-            this.complaintsPanel.Size = new System.Drawing.Size(780, 378);
-            this.complaintsPanel.TabIndex = 11;
-            this.complaintsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.complaintsPanel_Paint);
+            this.tabPage6.BackColor = System.Drawing.Color.Azure;
+            this.tabPage6.Controls.Add(this.groupBox5);
+            this.tabPage6.Location = new System.Drawing.Point(4, 33);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1327, 949);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "RegisterUser";
             // 
-            // label1
+            // groupBox5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(285, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 35);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Complaints manager";
+            this.groupBox5.BackColor = System.Drawing.Color.White;
+            this.groupBox5.Controls.Add(this.label34);
+            this.groupBox5.Controls.Add(this.IsAdminBox);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Controls.Add(this.EmailBox);
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Controls.Add(this.RoomNumBox);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.FullNameBox);
+            this.groupBox5.Controls.Add(this.label6);
+            this.groupBox5.Controls.Add(this.PasswordBox);
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Controls.Add(this.UsernameBox);
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Controls.Add(this.button1);
+            this.groupBox5.Location = new System.Drawing.Point(40, 33);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1226, 786);
+            this.groupBox5.TabIndex = 9;
+            this.groupBox5.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(28, 59);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(192, 26);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Account Username";
+            // 
+            // UsernameBox
+            // 
+            this.UsernameBox.Location = new System.Drawing.Point(33, 96);
+            this.UsernameBox.Multiline = true;
+            this.UsernameBox.Name = "UsernameBox";
+            this.UsernameBox.Size = new System.Drawing.Size(1150, 33);
+            this.UsernameBox.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(518, 26);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(150, 26);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Add New User";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Navy;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.ForeColor = System.Drawing.SystemColors.Window;
+            this.button1.Location = new System.Drawing.Point(479, 710);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(316, 58);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Submit complaint";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // PasswordBox
+            // 
+            this.PasswordBox.Location = new System.Drawing.Point(33, 196);
+            this.PasswordBox.Multiline = true;
+            this.PasswordBox.Name = "PasswordBox";
+            this.PasswordBox.Size = new System.Drawing.Size(1150, 33);
+            this.PasswordBox.TabIndex = 15;
+            this.PasswordBox.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(28, 152);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(186, 26);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Account Password";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(28, 261);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(194, 26);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Account Full Name";
+            // 
+            // FullNameBox
+            // 
+            this.FullNameBox.Location = new System.Drawing.Point(33, 306);
+            this.FullNameBox.Multiline = true;
+            this.FullNameBox.Name = "FullNameBox";
+            this.FullNameBox.Size = new System.Drawing.Size(1150, 33);
+            this.FullNameBox.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(28, 377);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(153, 26);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Room Number";
+            // 
+            // RoomNumBox
+            // 
+            this.RoomNumBox.Location = new System.Drawing.Point(33, 422);
+            this.RoomNumBox.Multiline = true;
+            this.RoomNumBox.Name = "RoomNumBox";
+            this.RoomNumBox.Size = new System.Drawing.Size(1150, 32);
+            this.RoomNumBox.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(28, 487);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(149, 26);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Account Email";
+            // 
+            // EmailBox
+            // 
+            this.EmailBox.Location = new System.Drawing.Point(33, 532);
+            this.EmailBox.Multiline = true;
+            this.EmailBox.Name = "EmailBox";
+            this.EmailBox.Size = new System.Drawing.Size(1150, 32);
+            this.EmailBox.TabIndex = 21;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(28, 585);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(217, 26);
+            this.label34.TabIndex = 24;
+            this.label34.Text = "Is Admin (True/False)";
+            // 
+            // IsAdminBox
+            // 
+            this.IsAdminBox.Location = new System.Drawing.Point(33, 633);
+            this.IsAdminBox.Multiline = true;
+            this.IsAdminBox.Name = "IsAdminBox";
+            this.IsAdminBox.Size = new System.Drawing.Size(1150, 32);
+            this.IsAdminBox.TabIndex = 23;
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 570);
+            this.ClientSize = new System.Drawing.Size(1335, 877);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
             this.tabPage5.ResumeLayout(false);
@@ -858,6 +999,9 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -924,5 +1068,21 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.FlowLayoutPanel complaintsPanel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox PasswordBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox UsernameBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox FullNameBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox IsAdminBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox EmailBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox RoomNumBox;
     }
 }

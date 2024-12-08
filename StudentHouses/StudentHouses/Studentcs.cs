@@ -23,12 +23,13 @@ namespace StudentHouses
         [DataMember]
         List<Announcements> studentAnnouncements = new List<Announcements>();
 
-        public Studentcs(string nameS, int roomN, int studentID, string email)
+        public Studentcs(string nameS, int roomN, int studentID, string email, bool ComplaintsBan)
         {
             this.name = nameS;
             this.roomNumber = roomN;
             this.studentId = studentID;
-            this.studentEmail = email;
+            this.studentEmail = email; 
+            this.bannedForComplaints = ComplaintsBan;
         }
 
 

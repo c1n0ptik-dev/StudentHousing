@@ -19,7 +19,7 @@ namespace StudentHouses
     public partial class StudentForm : Form
     {
         int month, year;
-        Studentcs student1 = new Studentcs("Darii", 206, 200645, "tishindariy@gmail.com");
+        Studentcs student1 = new Studentcs("Darii", 206, 200645, "tishindariy@gmail.com", false);
         List<Complaints> complaintList = new List<Complaints>();
 
         public StudentForm()
