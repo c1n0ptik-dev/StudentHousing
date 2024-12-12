@@ -12,18 +12,33 @@ namespace StudentHouses
 {
     public partial class UserControlComplaints : UserControl
     {
+        DatabaseHelper dbHelper = new DatabaseHelper();
+        int complaintid;
+        int complaintCreatorID;
+
         public UserControlComplaints(Complaints complain)
         {
             InitializeComponent();
-            string studentName = null;
+            //string studentName = null;
+            complaintid = complain.GetComplaintID();
+            complaintCreatorID = complain.CreatorID;
 
-            nameLabel.Text = complain.GetNameNumber();
+            nameLabel.Text = $"{complain.CreatorName} (ID: {complain.CreatorID})";
             textBox1.Text = complain.GetComplain();
+
+            //nameLabel.Text = $"Name: {complain.CreatorName}";
+            //idLabel.Text = $"ID: {complain.CreatorID}";
+
+            textBox1.ScrollBars = ScrollBars.Vertical;
         }
 
         private void UserControlComplaints_Load(object sender, EventArgs e)
         {
-            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dbHelper.DeleteComplaint(complaintid);
         }
     }
 }

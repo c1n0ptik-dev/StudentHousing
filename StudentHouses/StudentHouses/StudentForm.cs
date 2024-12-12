@@ -13,18 +13,42 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Runtime.Serialization;
 using System.Xml;
+using NpgsqlTypes;
 
 namespace StudentHouses
 {
     public partial class StudentForm : Form
     {
+        int StudentID;
         int month, year;
-        Studentcs student1 = new Studentcs("Darii", 206, 200645, "tishindariy@gmail.com", false);
+        Studentcs student1;
         List<Complaints> complaintList = new List<Complaints>();
+        DatabaseHelper dbHelper = new DatabaseHelper();
 
-        public StudentForm()
+
+        public StudentForm(int id)
         {
             InitializeComponent();
+            StudentID = id;
+
+            var studentData = dbHelper.GetStudentData(StudentID);
+            if (studentData.HasValue) 
+            {
+                var data = studentData.Value; 
+                student1 = new Studentcs(
+                    data.Name,
+                    data.RoomNumber,
+                    data.StudentId,
+                    data.StudentEmail,
+                    data.BannedForComplaints
+                );
+            }
+            else
+            {
+                MessageBox.Show("Student data not found.");
+                this.Close();
+            }
+
             Displays();
         }
 
@@ -103,57 +127,28 @@ namespace StudentHouses
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            WriteComplains();
-        }
-
-        private void WriteComplains()
-        {
-            if (student1.Banned() == false)
+            if (!student1.Banned())
             {
-                try
+                if (AcceptTC.Checked)
                 {
+                    bool isAnonymous = anonymousCheckBox.Checked;
+                    string creatorName = student1.GetStudent();
+                    int creatorId = student1.GetStudentId();
                     string complain = txtComplain.Text;
 
-                    if (string.IsNullOrEmpty(complain))
-                    {
-                        MessageBox.Show("You have to write something.");
-                        return;
-                    }
+                    dbHelper.AddComplaint(creatorName, creatorId, complain, isAnonymous);
 
-                    Complaints complaint = new Complaints(student1, complain);
-
-                    string filePath = "complaints.txt";
-                    List<Complaints> existingComplaints = new List<Complaints>();
-
-                    if (File.Exists(filePath))
-                    {
-                        using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
-                        {
-                            DataContractSerializer dcs = new DataContractSerializer(typeof(List<Complaints>));
-                            existingComplaints = (List<Complaints>)dcs.ReadObject(fs);
-                        }
-                    }
-
-                    existingComplaints.Add(complaint);
-
-                    using (FileStream fs = new FileStream(filePath, FileMode.Create, FileAccess.Write))
-                    {
-                        DataContractSerializer dcs = new DataContractSerializer(typeof(List<Complaints>));
-                        dcs.WriteObject(fs, existingComplaints);
-                    }
-
+                    anonymousCheckBox.Checked = false;
                     txtComplain.Text = "";
-
-                    MessageBox.Show("Complaint has been saved successfully.");
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show($"An error occurred: {ex.Message}");
+                    MessageBox.Show("You need to accept out Terms And Services Policy!");
                 }
             }
             else
             {
-                MessageBox.Show("You are banned for complaints");
+                MessageBox.Show("You are banned form the complaints!", "Banned!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

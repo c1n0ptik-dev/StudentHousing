@@ -28,38 +28,35 @@ namespace StudentHouses
         {
             InitializeComponent();
             dbHelper = new DatabaseHelper();
+
+            updateComplaints();
+        }
+
+        public void updateComplaints()
+        {
             try
             {
-                if (File.Exists("complaints.txt"))
+                complaintsPanel.Controls.Clear();
+
+                // Fetch complaints from the database
+                List<Complaints> complaintsList = dbHelper.GetAllComplaints();
+
+                // Add each complaint to the complaintsPanel
+                foreach (var complaint in complaintsList)
                 {
-                    using (FileStream fs = new FileStream("complaints.txt", FileMode.Open, FileAccess.Read))
-                    {
-                        DataContractSerializer dcs = new DataContractSerializer(typeof(List<Complaints>));
-
-                        List<Complaints> complaintsList = (List<Complaints>)dcs.ReadObject(fs);
-
-
-                        foreach (var complaint in complaintsList)
-                        {
-                            UserControlComplaints ucbc = new UserControlComplaints(complaint);
-                            complaintsPanel.Controls.Add(ucbc);
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("No complaints file found. Starting with an empty list.", "Information");
+                    UserControlComplaints ucbc = new UserControlComplaints(complaint);
+                    complaintsPanel.Controls.Add(ucbc);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading complaints: {ex.Message}", "Error");
             }
-
-
         }
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -116,6 +113,11 @@ namespace StudentHouses
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            updateComplaints();
         }
     }
 }

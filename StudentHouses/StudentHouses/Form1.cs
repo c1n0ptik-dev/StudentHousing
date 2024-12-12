@@ -45,7 +45,8 @@ namespace StudentHouses
                 }
                 else
                 {
-                    StudentForm student = new StudentForm();
+                    int studentID = dbHelper.GetStudetnID(username, password);
+                    StudentForm student = new StudentForm(studentID);
                     student.Show();
                     this.Hide();
                 }

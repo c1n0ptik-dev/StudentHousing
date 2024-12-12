@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentHouses
 {
@@ -11,32 +7,37 @@ namespace StudentHouses
     public class Complaints
     {
         [DataMember]
-        Studentcs student;
+        public int ComplaintID { get; set; } // Matches ComplaintID from the database
         [DataMember]
-        string complain;
+        public string CreatorName { get; set; } // Matches CreatorName from the database
         [DataMember]
-        int numberOfComplaints;
+        public int CreatorID { get; set; } // Matches CreatorID from the database
+        [DataMember]
+        public string ComplaintText { get; set; } // Matches ComplaintText from the database
 
-        public Complaints(Studentcs studentN, string complains)
+        public Complaints(int complaintID, string creatorName, int creatorID, string complaintText)
         {
-            this.student = studentN;
-            this.complain = complains;
-            numberOfComplaints += 1;
+            ComplaintID = complaintID;
+            CreatorName = creatorName;
+            CreatorID = creatorID;
+            ComplaintText = complaintText;
         }
 
-        public string GetNameNumber() 
+        // Method to format name and ID for display
+        public string GetNameNumber()
         {
-            return $"{student.GetStudent()}({student.GetStudentId()})";
+            return $"{CreatorName} ({CreatorID})";
         }
 
+        // Method to get the complaint text
         public string GetComplain()
         {
-            return $"{complain}";
+            return ComplaintText;
         }
 
-        public int GetNumber()
+        public int GetComplaintID()
         {
-            return numberOfComplaints;
+            return ComplaintID;
         }
     }
 }
