@@ -14,11 +14,15 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Runtime.Serialization;
 using System.Xml;
 using NpgsqlTypes;
+using ServiceStack;
+using ServiceStack.Script;
+using System.Web;
 
 namespace StudentHouses
 {
     public partial class StudentForm : Form
     {
+        static int static_month, static_year;
         int StudentID;
         int month, year;
         Studentcs student1;
@@ -87,6 +91,8 @@ namespace StudentHouses
             month = now.Month;
             year = now.Year;
 
+            static_month = month;
+            static_year = year;
 
             string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lblMandY.Text = monthName + " " + year;
@@ -95,19 +101,34 @@ namespace StudentHouses
             int daysInMonth = DateTime.DaysInMonth(year, month) + 1;
             int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
 
+   
             for (int i = 0; i < dayOfTheWeek; i++)
             {
                 UserControlPanel ucblank = new UserControlPanel();
                 daysContainer.Controls.Add(ucblank);
             }
 
+
             for (int i = 1; i < daysInMonth; i++)
             {
                 UserControlDays ucdays = new UserControlDays();
                 ucdays.Days(i);
+
+                DateTime currentDate = new DateTime(year, month, i);
+
+
+                List<string> eventsForDay = dbHelper.GetEventsForDate(currentDate);
+
+              
+                foreach (var eventDescription in eventsForDay)
+                {
+                    ucdays.DisplayEvent(eventDescription);
+                }
+
                 daysContainer.Controls.Add(ucdays);
             }
         }
+
 
 
         private void label6_Click(object sender, EventArgs e)
@@ -166,6 +187,9 @@ namespace StudentHouses
                 month--;
             }
 
+            static_month = month;
+            static_year = year;
+
             string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lblMandY.Text = monthName + " " + year;
 
@@ -189,6 +213,40 @@ namespace StudentHouses
 
         }
 
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (checkBox.Checked)
+            {
+                string title = titleBox.Text;
+                string time = dateTimePicker.Value.ToString("yyyy-MM-dd");
+                int roomUsed = Convert.ToInt32(roomUsed1.Text);
+                string org = orgBox.Text;
+                string description = descBox.Text;
+
+                dbHelper.AddEvent(title, time, roomUsed, org, description);
+
+                titleBox.Text = string.Empty;
+                dateTimePicker.Value = DateTime.Now;
+                roomUsed1.Text = string.Empty;
+                orgBox.Text = string.Empty;
+                descBox.Text = string.Empty;
+            }
+            else
+            {
+                MessageBox.Show("You need to accept T and C.");
+            }
+        }
+
+        private void StudentForm_Load_1(object sender, EventArgs e)
+        {
+        
+        }
+
         private void btnForward_Click(object sender, EventArgs e)
         {
             daysContainer.Controls.Clear();
@@ -203,6 +261,8 @@ namespace StudentHouses
                 month++;
             }
 
+            static_month = month;
+            static_year = year;
 
             string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lblMandY.Text = monthName + " " + year;
@@ -225,6 +285,16 @@ namespace StudentHouses
             }
 
 
+        }
+
+        public int GetStaticMonth()
+        {
+            return static_month;
+        }
+
+        public int GetStaticYear()
+        {
+            return static_year;
         }
     }
 }

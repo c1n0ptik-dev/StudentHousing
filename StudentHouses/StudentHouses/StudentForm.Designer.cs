@@ -71,22 +71,23 @@
             this.label25 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.titleBox = new System.Windows.Forms.TextBox();
+            this.roomUsed1 = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.descBox = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.orgBox = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -98,6 +99,7 @@
             this.label38 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -124,10 +126,10 @@
             this.tabControl1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.tabControl1.ItemSize = new System.Drawing.Size(100, 29);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1455, 1151);
+            this.tabControl1.Size = new System.Drawing.Size(1455, 1259);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 0;
             // 
@@ -148,8 +150,8 @@
             this.tabPage1.ForeColor = System.Drawing.Color.Azure;
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(1447, 1114);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1447, 1222);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Schedule";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -169,7 +171,7 @@
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F);
             this.btnBack.ForeColor = System.Drawing.Color.Black;
-            this.btnBack.Location = new System.Drawing.Point(1052, 1025);
+            this.btnBack.Location = new System.Drawing.Point(1145, 958);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(140, 43);
             this.btnBack.TabIndex = 8;
@@ -181,7 +183,7 @@
             // 
             this.btnForward.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F);
             this.btnForward.ForeColor = System.Drawing.Color.Black;
-            this.btnForward.Location = new System.Drawing.Point(1197, 1025);
+            this.btnForward.Location = new System.Drawing.Point(1291, 958);
             this.btnForward.Name = "btnForward";
             this.btnForward.Size = new System.Drawing.Size(136, 43);
             this.btnForward.TabIndex = 9;
@@ -205,7 +207,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(1204, 94);
+            this.label9.Location = new System.Drawing.Point(1263, 97);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(107, 29);
             this.label9.TabIndex = 6;
@@ -216,7 +218,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(1035, 94);
+            this.label8.Location = new System.Drawing.Point(1088, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 29);
             this.label8.TabIndex = 5;
@@ -227,7 +229,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(849, 94);
+            this.label7.Location = new System.Drawing.Point(877, 97);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 29);
             this.label7.TabIndex = 4;
@@ -238,7 +240,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(644, 94);
+            this.label6.Location = new System.Drawing.Point(663, 97);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 29);
             this.label6.TabIndex = 3;
@@ -250,7 +252,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(465, 94);
+            this.label5.Location = new System.Drawing.Point(481, 97);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 29);
             this.label5.TabIndex = 2;
@@ -261,7 +263,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(303, 94);
+            this.label1.Location = new System.Drawing.Point(296, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 29);
             this.label1.TabIndex = 1;
@@ -271,12 +273,13 @@
             // daysContainer
             // 
             this.daysContainer.AccessibleName = "daysContainer";
+            this.daysContainer.AutoScroll = true;
             this.daysContainer.BackColor = System.Drawing.SystemColors.ControlLight;
             this.daysContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.daysContainer.ForeColor = System.Drawing.Color.Navy;
-            this.daysContainer.Location = new System.Drawing.Point(69, 129);
+            this.daysContainer.Location = new System.Drawing.Point(52, 129);
             this.daysContainer.Name = "daysContainer";
-            this.daysContainer.Size = new System.Drawing.Size(1300, 869);
+            this.daysContainer.Size = new System.Drawing.Size(1371, 801);
             this.daysContainer.TabIndex = 0;
             this.daysContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.daysContainer_Paint);
             // 
@@ -286,8 +289,8 @@
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage2.Size = new System.Drawing.Size(1447, 1114);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1447, 1222);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Complaints";
             // 
@@ -336,7 +339,6 @@
             this.txtComplain.Name = "txtComplain";
             this.txtComplain.Size = new System.Drawing.Size(1260, 409);
             this.txtComplain.TabIndex = 13;
-            this.txtComplain.Text = "Enter the complaint...";
             this.txtComplain.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
@@ -394,7 +396,7 @@
             this.tabPage3.Controls.Add(this.label25);
             this.tabPage3.Location = new System.Drawing.Point(4, 33);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1447, 1114);
+            this.tabPage3.Size = new System.Drawing.Size(1447, 1222);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Rules";
             // 
@@ -596,24 +598,26 @@
             this.tabPage4.Controls.Add(this.groupBox3);
             this.tabPage4.Location = new System.Drawing.Point(4, 33);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1447, 1114);
+            this.tabPage4.Size = new System.Drawing.Size(1447, 1222);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Book Space";
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.label34);
+            this.groupBox3.Controls.Add(this.titleBox);
+            this.groupBox3.Controls.Add(this.roomUsed1);
             this.groupBox3.Controls.Add(this.label32);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.descBox);
             this.groupBox3.Controls.Add(this.label31);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.orgBox);
             this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.dateTimePicker);
             this.groupBox3.Controls.Add(this.label27);
-            this.groupBox3.Controls.Add(this.textBox2);
             this.groupBox3.Controls.Add(this.label28);
             this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.checkBox3);
+            this.groupBox3.Controls.Add(this.checkBox);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Location = new System.Drawing.Point(56, 78);
             this.groupBox3.Name = "groupBox3";
@@ -621,79 +625,94 @@
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(42, 155);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(79, 37);
+            this.label34.TabIndex = 24;
+            this.label34.Text = "Title";
+            // 
+            // titleBox
+            // 
+            this.titleBox.Location = new System.Drawing.Point(37, 219);
+            this.titleBox.Name = "titleBox";
+            this.titleBox.Size = new System.Drawing.Size(393, 30);
+            this.titleBox.TabIndex = 23;
+            // 
+            // roomUsed1
+            // 
+            this.roomUsed1.FormattingEnabled = true;
+            this.roomUsed1.Location = new System.Drawing.Point(37, 354);
+            this.roomUsed1.Name = "roomUsed1";
+            this.roomUsed1.Size = new System.Drawing.Size(392, 32);
+            this.roomUsed1.TabIndex = 22;
+            // 
             // label32
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(30, 538);
+            this.label32.Location = new System.Drawing.Point(42, 577);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(178, 37);
             this.label32.TabIndex = 21;
             this.label32.Text = "Description";
             // 
-            // textBox4
+            // descBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(38, 598);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(1238, 141);
-            this.textBox4.TabIndex = 20;
-            this.textBox4.Text = "Description";
+            this.descBox.Location = new System.Drawing.Point(37, 631);
+            this.descBox.Multiline = true;
+            this.descBox.Name = "descBox";
+            this.descBox.Size = new System.Drawing.Size(1238, 109);
+            this.descBox.TabIndex = 20;
+            this.descBox.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(30, 394);
+            this.label31.Location = new System.Drawing.Point(42, 421);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(155, 37);
             this.label31.TabIndex = 19;
             this.label31.Text = "Organizer";
             // 
-            // textBox3
+            // orgBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(38, 452);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(1238, 61);
-            this.textBox3.TabIndex = 18;
-            this.textBox3.Text = "Enter the name of the host...";
+            this.orgBox.Location = new System.Drawing.Point(37, 480);
+            this.orgBox.Multiline = true;
+            this.orgBox.Name = "orgBox";
+            this.orgBox.Size = new System.Drawing.Size(1238, 61);
+            this.orgBox.TabIndex = 18;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(28, 254);
+            this.label30.Location = new System.Drawing.Point(42, 287);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(240, 37);
             this.label30.TabIndex = 17;
             this.label30.Text = "The Room Used";
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(34, 189);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(396, 30);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dateTimePicker.Location = new System.Drawing.Point(591, 217);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(396, 30);
+            this.dateTimePicker.TabIndex = 16;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(28, 137);
+            this.label27.Location = new System.Drawing.Point(584, 155);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(87, 37);
             this.label27.TabIndex = 14;
             this.label27.Text = "Time";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(34, 312);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(1238, 61);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.Text = "Enter the room number...";
             // 
             // label28
             // 
@@ -715,29 +734,30 @@
             this.label29.TabIndex = 11;
             this.label29.Text = "Book The Space";
             // 
-            // checkBox3
+            // checkBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox3.Location = new System.Drawing.Point(36, 766);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(309, 26);
-            this.checkBox3.TabIndex = 10;
-            this.checkBox3.Text = "I accept the Terms and Conditions";
-            this.checkBox3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox.AutoSize = true;
+            this.checkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox.Location = new System.Drawing.Point(37, 773);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(309, 26);
+            this.checkBox.TabIndex = 10;
+            this.checkBox.Text = "I accept the Terms and Conditions";
+            this.checkBox.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Navy;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(494, 802);
+            this.button2.Location = new System.Drawing.Point(468, 806);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(316, 58);
             this.button2.TabIndex = 3;
             this.button2.Text = "Submit";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tabPage5
             // 
@@ -745,7 +765,7 @@
             this.tabPage5.Controls.Add(this.tabControl2);
             this.tabPage5.Location = new System.Drawing.Point(4, 33);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1447, 1114);
+            this.tabPage5.Size = new System.Drawing.Size(1447, 1222);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Student Chores";
             // 
@@ -770,16 +790,6 @@
             this.tabPage6.Size = new System.Drawing.Size(1439, 1078);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "Add Student Chore";
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.Color.Azure;
-            this.tabPage7.Location = new System.Drawing.Point(4, 33);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1439, 1078);
-            this.tabPage7.TabIndex = 1;
-            this.tabPage7.Text = "My Chores";
             // 
             // groupBox4
             // 
@@ -918,14 +928,25 @@
             this.button3.Text = "Submit";
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.Azure;
+            this.tabPage7.Location = new System.Drawing.Point(4, 33);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1439, 1078);
+            this.tabPage7.TabIndex = 1;
+            this.tabPage7.Text = "My Chores";
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1455, 1149);
+            this.ClientSize = new System.Drawing.Size(1455, 1058);
             this.Controls.Add(this.tabControl1);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
+            this.Load += new System.EventHandler(this.StudentForm_Load_1);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -991,17 +1012,16 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox descBox;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox orgBox;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Button btnForward;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblMandY;
@@ -1019,5 +1039,8 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.ComboBox roomUsed1;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox titleBox;
     }
 }

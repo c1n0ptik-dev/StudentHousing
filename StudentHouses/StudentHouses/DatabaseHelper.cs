@@ -269,6 +269,77 @@ namespace StudentHouses
             }
         }
 
+        public void AddEvent(string title, string date, int roomUsed, string organizer, string description)
+        {
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+                {
+                    string query = "INSERT INTO Calendar (Title, Time, RoomUsed, Organizer, Description) VALUES (@title, @time, @room, @org, @description)";
+
+                    conn.Open();
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@title", title);
+                        cmd.Parameters.AddWithValue("@time", date);
+                        cmd.Parameters.AddWithValue("@room", roomUsed);
+                        cmd.Parameters.AddWithValue("@org", organizer);
+                        cmd.Parameters.AddWithValue("@description", description);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Complaint is succesfully added.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while adding a complaint: {ex.Message}");
+            }
+        }
+
+
+        public List<string> GetEventsForDate(DateTime date)
+        {
+            List<string> eventsList = new List<string>();
+
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT Title, Time, Description FROM Calendar WHERE Time = @date";
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@date", date.ToString("yyyy-MM-dd"));
+
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string eventTitle = reader.GetString(0);
+                                string eventDescription = reader.GetString(2);
+                                string eventDetails = $"{eventTitle}: {eventDescription}";
+
+                                eventsList.Add(eventDetails);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error fetching events: {ex.Message}", "Error");
+            }
+
+            return eventsList;
+        }
+
+
+
+
+
 
         public void BanUser(int creatorID)
         {

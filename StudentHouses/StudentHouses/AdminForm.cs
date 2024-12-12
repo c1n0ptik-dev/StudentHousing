@@ -38,10 +38,9 @@ namespace StudentHouses
             {
                 complaintsPanel.Controls.Clear();
 
-                // Fetch complaints from the database
                 List<Complaints> complaintsList = dbHelper.GetAllComplaints();
 
-                // Add each complaint to the complaintsPanel
+              
                 foreach (var complaint in complaintsList)
                 {
                     UserControlComplaints ucbc = new UserControlComplaints(complaint);
