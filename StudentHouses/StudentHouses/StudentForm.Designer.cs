@@ -100,6 +100,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -136,6 +137,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Azure;
+            this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.lblMandY);
             this.tabPage1.Controls.Add(this.btnBack);
             this.tabPage1.Controls.Add(this.btnForward);
@@ -938,6 +940,18 @@
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "My Chores";
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Location = new System.Drawing.Point(1065, 958);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(59, 45);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "↻";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1042,5 +1056,6 @@
         private System.Windows.Forms.ComboBox roomUsed1;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox titleBox;
+        private System.Windows.Forms.Button button4;
     }
 }

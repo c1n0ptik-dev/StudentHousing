@@ -287,6 +287,13 @@ namespace StudentHouses
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            daysContainer.Controls.Clear();
+            Displays();
+
+        }
+
         public int GetStaticMonth()
         {
             return static_month;
