@@ -298,7 +298,6 @@ namespace StudentHouses
             }
         }
 
-
         public List<string> GetEventsForDate(DateTime date)
         {
             List<string> eventsList = new List<string>();
@@ -308,7 +307,7 @@ namespace StudentHouses
                 using (SQLiteConnection conn = new SQLiteConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "SELECT Title, Time, Description FROM Calendar WHERE Time = @date";
+                    string query = "SELECT Title, Time, RoomUsed, Organizer, Description FROM Calendar WHERE Time = @date";
 
                     using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                     {
@@ -319,9 +318,11 @@ namespace StudentHouses
                             while (reader.Read())
                             {
                                 string eventTitle = reader.GetString(0);
-                                string eventDescription = reader.GetString(2);
-                                string eventDetails = $"{eventTitle}: {eventDescription}";
+                                int roomUsed = reader.GetInt32(2); 
+                                string organizer = reader.GetString(3);
+                                string eventDescription = reader.GetString(4);
 
+                                string eventDetails = $"{eventTitle} (Room {roomUsed})";
                                 eventsList.Add(eventDetails);
                             }
                         }
@@ -335,6 +336,7 @@ namespace StudentHouses
 
             return eventsList;
         }
+
 
 
 

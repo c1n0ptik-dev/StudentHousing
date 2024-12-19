@@ -82,7 +82,7 @@ namespace StudentHouses
                 string password = PasswordBox.Text.Trim();
                 string fullName = FullNameBox.Text.Trim();
                 string email = EmailBox.Text.Trim();
-                bool isAdmin = IsAdminBox.Text.Trim().Equals("True", StringComparison.OrdinalIgnoreCase);
+                bool isAdmin = checkBox.Checked;
 
                 Console.WriteLine($"Full Name Before Insert: {fullName}"); // Debugging Log
 
@@ -106,7 +106,7 @@ namespace StudentHouses
                 FullNameBox.Clear();
                 RoomNumBox.Clear();
                 EmailBox.Clear();
-                IsAdminBox.Clear();
+                checkBox.Checked = false;
             }
             catch (Exception ex)
             {
