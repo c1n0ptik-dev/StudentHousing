@@ -1,9 +1,13 @@
 ﻿using Newtonsoft.Json.Linq;
+using ServiceStack;
+using ServiceStack.OrmLite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
+using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.Net.PeerToPeer.Collaboration;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
@@ -338,14 +342,181 @@ namespace StudentHouses
         }
 
 
-
-
-
-
+        public DataTable GetBannedUsers()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                var query = "SELECT Name, Username, StudentEmail FROM Users WHERE BannedForComplaints = 1";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    using (var adapter = new SQLiteDataAdapter(cmd))
+                    {
+                        var dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        return dataTable;
+                    }
+                }
+            }
+        }
+        
+        public void UnbanUser(string username)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                var query = "UPDATE Users SET BannedForComplaints = 0 WHERE Username = @Username";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
 
         public void BanUser(int creatorID)
         {
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "UPDATE Users SET BannedForComplaints = 1 WHERE StudentId = @StudentId";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@StudentId", creatorID);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("User banned successfully.", "Ban info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while banning user: {ex.Message}");
+            }       
+        }
 
+        public List<string> GetAllUserNames()
+        {
+            List<string> AvailableNames = new List<string>(); 
+
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT Name FROM Users WHERE IsAdmin = 0";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                AvailableNames.Add(reader.GetString(0));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while fecthing users: {ex.Message}");
+            }
+
+            return AvailableNames;
+        }
+
+        public int GetStudentIdByName(string name)
+        {
+           using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+           {
+              conn.Open();
+              string query = "SELECT StudentId FROM Users WHERE Name = @Name";
+              using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+              {
+                 cmd.Parameters.AddWithValue("@Name", name);
+                 var result = cmd.ExecuteScalar();
+                 return result != null ? Convert.ToInt32(result) : -1;
+               }
+           }
+        }
+
+
+        public void AddChore(int creatorID, string creatorName, string choreTitle, string choreBody, int responsibleID)
+        {
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = @"INSERT INTO Chores (CreatorID, CreatorName, ChoreTitle, ChoreBody, ResponsibleID) VALUES (@CreatorID, @CreatorName, @ChoreTitle, @ChoreBody, @ResponsibleID)";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@CreatorID", creatorID);
+                        cmd.Parameters.AddWithValue("@CreatorName", creatorName);
+                        cmd.Parameters.AddWithValue("@ChoreTitle", choreTitle);
+                        cmd.Parameters.AddWithValue("@ChoreBody", choreBody);
+                        cmd.Parameters.AddWithValue("@ResponsibleID", responsibleID);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error while adding a chore: {ex.Message}");
+            }
+        }
+
+        public Chores[] GetChoresByUserID(int activeUserID)
+        {
+            var choresList = new List<Chores>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT ChoreID, CreatorID, CreatorName, ChoreTitle, ChoreBody, ResponsibleID " +
+                               "FROM Chores WHERE ResponsibleID = @ActiveUserID";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ActiveUserID", activeUserID);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var chore = new Chores(
+                                choreID: reader.GetInt32(0),
+                                creatorID: reader.GetInt32(1),
+                                creatorName: reader.GetString(2),
+                                choreTitle: reader.GetString(3),
+                                choreBody: reader.GetString(4),
+                                responsibleID: reader.GetInt32(5)
+                            );
+
+                            choresList.Add(chore);
+                        }
+                    }
+                }
+            }
+
+            return choresList.ToArray();
+        }
+
+        public void DeleteChore(int ChoreID)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM Chores WHERE ChoreID = @ChoreID";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ChoreID", ChoreID);
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

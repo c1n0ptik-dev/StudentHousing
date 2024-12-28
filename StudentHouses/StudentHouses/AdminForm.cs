@@ -29,6 +29,9 @@ namespace StudentHouses
             InitializeComponent();
             dbHelper = new DatabaseHelper();
 
+            BannedUsersTable.CellClick += BannedUsersTable_CellClick;
+            LoadBannedUsers();
+
             updateComplaints();
         }
 
@@ -40,7 +43,7 @@ namespace StudentHouses
 
                 List<Complaints> complaintsList = dbHelper.GetAllComplaints();
 
-              
+                
                 foreach (var complaint in complaintsList)
                 {
                     UserControlComplaints ucbc = new UserControlComplaints(complaint);
@@ -51,6 +54,39 @@ namespace StudentHouses
             {
                 MessageBox.Show($"Error loading complaints: {ex.Message}", "Error");
             }
+        }
+
+        private void LoadBannedUsers()
+        {
+            var dataTable = dbHelper.GetBannedUsers();
+            BannedUsersTable.DataSource = dataTable;
+
+            if (!BannedUsersTable.Columns.Contains("Unban"))
+            {
+                var unbanButtonColumn = new DataGridViewButtonColumn
+                {
+                    HeaderText = "Action",
+                    Text = "Unban",
+                    UseColumnTextForButtonValue = true,
+                    Name = "Unban"
+                };
+                BannedUsersTable.Columns.Add(unbanButtonColumn);
+            }
+        }
+
+        private void BannedUsersTable_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == BannedUsersTable.Columns["Unban"].Index && e.RowIndex >= 0)
+            {
+                var username = BannedUsersTable.Rows[e.RowIndex].Cells["Username"].Value.ToString();
+                dbHelper.UnbanUser(username);
+                LoadBannedUsers(); // Refresh the table
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LoadBannedUsers();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

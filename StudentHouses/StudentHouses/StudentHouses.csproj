@@ -3,6 +3,12 @@
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <ContentSQLiteInteropFiles>true</ContentSQLiteInteropFiles>
+    <CopySQLiteInteropFiles>false</CopySQLiteInteropFiles>
+    <CleanSQLiteInteropFiles>false</CleanSQLiteInteropFiles>
+    <CollectSQLiteInteropFiles>false</CollectSQLiteInteropFiles>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}</ProjectGuid>
@@ -310,6 +316,7 @@
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Announcements.cs" />
+    <Compile Include="Chores.cs" />
     <Compile Include="complaints.cs" />
     <Compile Include="DatabaseHelper.cs" />
     <Compile Include="Form1.cs">
@@ -326,6 +333,12 @@
     </Compile>
     <Compile Include="StudentForm.Designer.cs">
       <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlChore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlChore.Designer.cs">
+      <DependentUpon>UserControlChore.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlComplaints.cs">
       <SubType>UserControl</SubType>
@@ -362,6 +375,9 @@
     </Compile>
     <EmbeddedResource Include="StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlChore.resx">
+      <DependentUpon>UserControlChore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlComplaints.resx">
       <DependentUpon>UserControlComplaints.cs</DependentUpon>

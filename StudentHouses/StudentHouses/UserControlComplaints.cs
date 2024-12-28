@@ -14,7 +14,7 @@ namespace StudentHouses
     {
         DatabaseHelper dbHelper = new DatabaseHelper();
         int complaintid;
-        int complaintCreatorID;
+        private int complaintCreatorID;
 
         public UserControlComplaints(Complaints complain)
         {
@@ -39,6 +39,13 @@ namespace StudentHouses
         private void button2_Click(object sender, EventArgs e)
         {
             dbHelper.DeleteComplaint(complaintid);
+        }
+
+        private void BanBTN_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show($"{complaintCreatorID}");
+
+            dbHelper.BanUser(complaintCreatorID);
         }
     }
 }
