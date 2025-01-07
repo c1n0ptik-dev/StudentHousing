@@ -36,6 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UserControlPanel";
             this.Size = new System.Drawing.Size(153, 125);
+            this.Load += new System.EventHandler(this.UserControlPanel_Load);
             this.ResumeLayout(false);
 
         }

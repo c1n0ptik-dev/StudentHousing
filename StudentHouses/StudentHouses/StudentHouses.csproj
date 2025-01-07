@@ -319,6 +319,7 @@
     <Compile Include="Chores.cs" />
     <Compile Include="complaints.cs" />
     <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="Event.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,6 +359,12 @@
     <Compile Include="UserControlPanel.Designer.cs">
       <DependentUpon>UserControlPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewEventcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewEventcs.Designer.cs">
+      <DependentUpon>ViewEventcs.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlPanel.resx">
       <DependentUpon>UserControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewEventcs.resx">
+      <DependentUpon>ViewEventcs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

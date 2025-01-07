@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using ServiceStack;
 using ServiceStack.OrmLite;
+using ServiceStack.Script;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
@@ -302,9 +303,9 @@ namespace StudentHouses
             }
         }
 
-        public List<string> GetEventsForDate(DateTime date)
+        public List<Events> GetEventsForDate(DateTime date)
         {
-            List<string> eventsList = new List<string>();
+            List<Events> eventsList = new List<Events>();
 
             try
             {
@@ -321,14 +322,15 @@ namespace StudentHouses
                         {
                             while (reader.Read())
                             {
+                                string time = reader.GetString(1);
                                 string eventTitle = reader.GetString(0);
                                 int roomUsed = reader.GetInt32(2); 
                                 string organizer = reader.GetString(3);
                                 string eventDescription = reader.GetString(4);
 
-                                string eventDetails = $"{eventTitle} (Room {roomUsed})";
-                                eventsList.Add(eventDetails);
-                            }
+                                Events events = new Events(eventTitle, time, roomUsed, organizer, eventDescription);
+                                eventsList.Add(events);
+                            }   
                         }
                     }
                 }

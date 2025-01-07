@@ -27,7 +27,7 @@ namespace StudentHouses
         int month, year;
         Studentcs student1;
         List<Complaints> complaintList = new List<Complaints>();
-        List<Chores> chores = new List<Chores>();   
+        List<Chores> chores = new List<Chores>();
         DatabaseHelper dbHelper = new DatabaseHelper();
 
 
@@ -134,36 +134,30 @@ namespace StudentHouses
             lblMandY.Text = monthName + " " + year;
 
             DateTime startOfTheMonth = new DateTime(year, month, 1);
-            int daysInMonth = DateTime.DaysInMonth(year, month) + 1;
+            int daysInMonth = DateTime.DaysInMonth(year, month);
             int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
 
-   
             for (int i = 0; i < dayOfTheWeek; i++)
             {
                 UserControlPanel ucblank = new UserControlPanel();
                 daysContainer.Controls.Add(ucblank);
             }
 
-
-            for (int i = 1; i < daysInMonth; i++)
+            for (int i = 1; i <= daysInMonth; i++)
             {
                 UserControlDays ucdays = new UserControlDays();
                 ucdays.Days(i);
 
                 DateTime currentDate = new DateTime(year, month, i);
 
+                List<Events> eventsForDay = dbHelper.GetEventsForDate(currentDate);
 
-                List<string> eventsForDay = dbHelper.GetEventsForDate(currentDate);
-
-              
-                foreach (var eventDescription in eventsForDay)
-                {
-                    ucdays.DisplayEvent(eventDescription);
-                }
+                ucdays.DisplayEvents(eventsForDay);
 
                 daysContainer.Controls.Add(ucdays);
             }
         }
+
 
 
 

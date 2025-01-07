@@ -16,5 +16,10 @@ namespace StudentHouses
         {
             InitializeComponent();
         }
+
+        private void UserControlPanel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

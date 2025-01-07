@@ -26,10 +26,36 @@ namespace StudentHouses
 
         }
 
-        public void DisplayEvent(string eventDescription)
+        public void DisplayEvents(List<Events> eventDescriptions)
         {
-            lblEvent.Text += eventDescription + "\n";
+            if (eventDescriptions != null && eventDescriptions.Count > 0)
+            {
+                ListBox listBox = new ListBox
+                {
+                    Width = 140,
+                    Height = 57
+                };
+
+                foreach (var eventDescription in eventDescriptions)
+                {
+                    listBox.Items.Add(eventDescription);  
+                }
+
+                listBox.SelectedIndexChanged += (sender, e) =>
+                {
+                    if (listBox.SelectedIndex != -1)
+                    {
+                        Events selectedEvent = (Events)listBox.SelectedItem; 
+                        ViewEventcs detailsForm = new ViewEventcs(selectedEvent);
+                        detailsForm.Show();
+                    }
+                };
+
+                flowLayoutPanel1.Controls.Add(listBox);
+            }
         }
+        
+
 
         public void Days(int numday)
         {
@@ -47,5 +73,6 @@ namespace StudentHouses
         {
 
         }
+
     }
 }
