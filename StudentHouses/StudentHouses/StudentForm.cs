@@ -55,7 +55,6 @@ namespace StudentHouses
                 this.Close();
             }
 
-            //Fetch avaliable studnets
             List<string> AvailableStudents = dbHelper.GetAllUserNames();
             
             
@@ -64,8 +63,6 @@ namespace StudentHouses
                 StudentsComboBox.Items.Add(s);
             }
 
-            //UserControlChore userControlChore = new UserControlChore();
-            //flowLayoutPanel1.Controls.Add(userControlChore);
 
             UpdateChores();
 

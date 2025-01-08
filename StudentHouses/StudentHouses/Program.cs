@@ -9,10 +9,7 @@ namespace StudentHouses
 {
     internal static class Program
     {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
-        /// 
+
         [STAThread]
         static void Main()
         {
@@ -24,8 +21,6 @@ namespace StudentHouses
             Application.Run(new Form1());
         }
 
-
-        // ***also dllimport of that function***
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();
     }

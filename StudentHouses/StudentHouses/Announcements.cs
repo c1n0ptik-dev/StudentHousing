@@ -10,11 +10,11 @@ namespace StudentHouses
     {
         DateTime date;
         string contents;
-        string student;
+        Studentcs student;
 
-        public Announcements(DateTime dateA, string content, string studentInfo)
+        public Announcements(DateTime dateA, Studentcs student, string studentInfo)
         {
-            this.date = date;
+            this.date = dateA; 
         }
     }
 }

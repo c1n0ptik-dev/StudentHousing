@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace StudentHouses
 {
@@ -30,6 +31,16 @@ namespace StudentHouses
             this.studentId = studentID;
             this.studentEmail = email; 
             this.bannedForComplaints = ComplaintsBan;
+        }
+
+        public Studentcs(string nameSS)
+        {
+            this.name = nameSS;
+        }
+
+        public override string ToString()
+        {
+            return name;
         }
 
 

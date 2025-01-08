@@ -11,11 +11,11 @@ namespace StudentHouses
         private string title;
         private string time;
         private int roomUsed;
-        private string organizer;
+        private Studentcs organizer;
         private string description;
 
 
-        public Events(string name, string date, int room, string org, string descriptioN)
+        public Events(string name, string date, int room, Studentcs org, string descriptioN)
         {
             this.title = name;
             this.time = date;
@@ -31,7 +31,7 @@ namespace StudentHouses
 
         public List<string> GetInfo()
         {
-            return new List<string> { title, time, roomUsed.ToString(), organizer, description };
+            return new List<string> { title, time, roomUsed.ToString(), organizer.ToString(), description };
         }
     }
 }

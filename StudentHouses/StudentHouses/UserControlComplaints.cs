@@ -19,15 +19,12 @@ namespace StudentHouses
         public UserControlComplaints(Complaints complain)
         {
             InitializeComponent();
-            //string studentName = null;
             complaintid = complain.GetComplaintID();
             complaintCreatorID = complain.CreatorID;
 
-            nameLabel.Text = $"{complain.CreatorName} (ID: {complain.CreatorID})";
+            nameLabel.Text = $"{complain.student} (ID: {complain.CreatorID})";
             textBox1.Text = complain.GetComplain();
 
-            //nameLabel.Text = $"Name: {complain.CreatorName}";
-            //idLabel.Text = $"ID: {complain.CreatorID}";
 
             textBox1.ScrollBars = ScrollBars.Vertical;
         }
@@ -43,8 +40,6 @@ namespace StudentHouses
 
         private void BanBTN_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show($"{complaintCreatorID}");
-
             dbHelper.BanUser(complaintCreatorID);
         }
     }

@@ -7,29 +7,22 @@ namespace StudentHouses
     public class Complaints
     {
         [DataMember]
-        public int ComplaintID { get; set; } // Matches ComplaintID from the database
+        public int ComplaintID { get; set; } 
         [DataMember]
-        public string CreatorName { get; set; } // Matches CreatorName from the database
+        public Studentcs student { get; set; }
         [DataMember]
-        public int CreatorID { get; set; } // Matches CreatorID from the database
+        public int CreatorID { get; set; } 
         [DataMember]
-        public string ComplaintText { get; set; } // Matches ComplaintText from the database
+        public string ComplaintText { get; set; } 
 
-        public Complaints(int complaintID, string creatorName, int creatorID, string complaintText)
+        public Complaints(int complaintID, Studentcs students, int creatorID, string complaintText)
         {
             ComplaintID = complaintID;
-            CreatorName = creatorName;
+            student = students;
             CreatorID = creatorID;
             ComplaintText = complaintText;
         }
 
-        // Method to format name and ID for display
-        public string GetNameNumber()
-        {
-            return $"{CreatorName} ({CreatorID})";
-        }
-
-        // Method to get the complaint text
         public string GetComplain()
         {
             return ComplaintText;

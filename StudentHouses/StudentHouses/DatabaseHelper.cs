@@ -219,11 +219,12 @@ namespace StudentHouses
                         {
                             while (reader.Read())
                             {
+                                Studentcs student = new Studentcs(reader.GetString(1));
                                 Complaints complaint = new Complaints(
                                     reader.GetInt32(0),  
-                                    reader.GetString(1), 
-                                    reader.GetInt32(2),
-                                    reader.GetString(3) 
+                                    student,             
+                                    reader.GetInt32(2), 
+                                    reader.GetString(3)  
                                 );
 
                                 complaintsList.Add(complaint);
@@ -328,7 +329,9 @@ namespace StudentHouses
                                 string organizer = reader.GetString(3);
                                 string eventDescription = reader.GetString(4);
 
-                                Events events = new Events(eventTitle, time, roomUsed, organizer, eventDescription);
+                                Studentcs student = new Studentcs(organizer);
+
+                                Events events = new Events(eventTitle, time, roomUsed, student, eventDescription);
                                 eventsList.Add(events);
                             }   
                         }

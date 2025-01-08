@@ -80,7 +80,7 @@ namespace StudentHouses
             {
                 var username = BannedUsersTable.Rows[e.RowIndex].Cells["Username"].Value.ToString();
                 dbHelper.UnbanUser(username);
-                LoadBannedUsers(); // Refresh the table
+                LoadBannedUsers(); 
             }
         }
 
@@ -113,14 +113,14 @@ namespace StudentHouses
         {
             try
             {
-                // Collect and validate user input
+              
                 string username = UsernameBox.Text.Trim();
                 string password = PasswordBox.Text.Trim();
                 string fullName = FullNameBox.Text.Trim();
                 string email = EmailBox.Text.Trim();
                 bool isAdmin = checkBox.Checked;
 
-                Console.WriteLine($"Full Name Before Insert: {fullName}"); // Debugging Log
+                Console.WriteLine($"Full Name Before Insert: {fullName}"); 
 
                 if (string.IsNullOrWhiteSpace(username) ||
                     string.IsNullOrWhiteSpace(password) ||
@@ -136,7 +136,6 @@ namespace StudentHouses
 
                 MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Clear the input fields after successful registration
                 UsernameBox.Clear();
                 PasswordBox.Clear();
                 FullNameBox.Clear();
