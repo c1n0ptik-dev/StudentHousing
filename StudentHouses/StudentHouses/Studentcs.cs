@@ -21,8 +21,6 @@ namespace StudentHouses
         string studentEmail;
         [DataMember]
         bool bannedForComplaints = false;
-        [DataMember]
-        List<Announcements> studentAnnouncements = new List<Announcements>();
 
         public Studentcs(string nameS, int roomN, int studentID, string email, bool ComplaintsBan)
         {
@@ -31,6 +29,11 @@ namespace StudentHouses
             this.studentId = studentID;
             this.studentEmail = email; 
             this.bannedForComplaints = ComplaintsBan;
+        }
+
+        public string GetStudentEmail()
+        {
+            return studentEmail;
         }
 
         public Studentcs(string nameSS)
@@ -43,6 +46,10 @@ namespace StudentHouses
             return name;
         }
 
+        public int GetRoomNumber()
+        {
+            return roomNumber;
+        }
 
         public void ChangeBan(bool changes)
         {

@@ -14,11 +14,12 @@ namespace StudentHouses
     {
         DatabaseHelper dbHelper = new DatabaseHelper();
         int ChoreId;
+        List<Chores> Chores;
 
-
-        public UserControlChore(Chores chore)
+        public UserControlChore(Chores chore, List<Chores> chores)
         {
             InitializeComponent();
+            Chores = chores; 
 
             ChoreText.Enabled = true;
             ChoreId = chore.GetChoreID();
@@ -29,9 +30,12 @@ namespace StudentHouses
 
         private void ChoreDone_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(Convert.ToString(ChoreId));
+
             try
             {
                 dbHelper.DeleteChore(ChoreId);
+                Chores.RemoveAll(c => c.ChoreID == ChoreId);
             }
             catch (Exception ex)
             {

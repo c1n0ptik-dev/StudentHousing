@@ -523,5 +523,31 @@ namespace StudentHouses
                 }
             }
         }
+
+        public int GetLastInsertedChoreId()
+        {
+            int lastInsertedId = 0;
+
+            try
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT last_insert_rowid();";
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        lastInsertedId = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while getting the last inserted ID: {ex.Message}");
+            }
+
+            return lastInsertedId;
+        }
+
     }
 }

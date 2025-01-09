@@ -1,22 +1,9 @@
-﻿using MySqlX.XDevAPI.Relational;
+﻿using ServiceStack;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Runtime.Serialization;
-using System.Xml;
-using NpgsqlTypes;
-using ServiceStack;
-using ServiceStack.Script;
-using System.Web;
 
 namespace StudentHouses
 {
@@ -30,12 +17,10 @@ namespace StudentHouses
         List<Chores> chores = new List<Chores>();
         DatabaseHelper dbHelper = new DatabaseHelper();
 
-
         public StudentForm(int id)
         {
             InitializeComponent();
             StudentID = id;
-
 
             var studentData = dbHelper.GetStudentData(StudentID);
             if (studentData.HasValue)
@@ -56,13 +41,13 @@ namespace StudentHouses
             }
 
             List<string> AvailableStudents = dbHelper.GetAllUserNames();
-            
-            
+
             foreach (string s in AvailableStudents)
             {
                 StudentsComboBox.Items.Add(s);
             }
 
+            chores = dbHelper.GetChoresByUserID(StudentID).ToList();
 
             UpdateChores();
 
@@ -73,51 +58,24 @@ namespace StudentHouses
         {
             try
             {
-                Chores[] chores = dbHelper.GetChoresByUserID(student1.GetStudentId());
                 ChoresContainer.Controls.Clear();
 
                 foreach (Chores chore in chores)
                 {
-                    UserControlChore userChores = new UserControlChore(chore);
-                    ChoresContainer.Controls.Add(userChores);
+                    if(chore.ResponsibleID == StudentID)
+                    {
+                        UserControlChore userChores = new UserControlChore(chore, chores);
+                        ChoresContainer.Controls.Add(userChores);
+                    } 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error while fetching student chores: {ex.Message}");
+                MessageBox.Show($"Error while updating chores: {ex.Message}");
             }
-
         }
 
-        private void StudentForm_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
         private void Displays()
         {
             DateTime now = DateTime.Now;
@@ -155,24 +113,6 @@ namespace StudentHouses
             }
         }
 
-
-
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void daysContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void loginButton_Click(object sender, EventArgs e)
         {
             if (!student1.Banned())
@@ -191,14 +131,16 @@ namespace StudentHouses
                 }
                 else
                 {
-                    MessageBox.Show("You need to accept out Terms And Services Policy!");
+                    MessageBox.Show("You need to accept our Terms And Services Policy!");
                 }
             }
             else
             {
-                MessageBox.Show("You are banned form the complaints!", "Banned!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You are banned from the complaints!", "Banned!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -236,13 +178,6 @@ namespace StudentHouses
                 ucdays.Days(i);
                 daysContainer.Controls.Add(ucdays);
             }
-
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -267,11 +202,6 @@ namespace StudentHouses
             {
                 MessageBox.Show("You need to accept T and C.");
             }
-        }
-
-        private void StudentForm_Load_1(object sender, EventArgs e)
-        {
-        
         }
 
         private void btnForward_Click(object sender, EventArgs e)
@@ -310,23 +240,15 @@ namespace StudentHouses
                 ucdays.Days(i);
                 daysContainer.Controls.Add(ucdays);
             }
-
-
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             daysContainer.Controls.Clear();
             Displays();
-
         }
 
-        private void label35_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             int creatorID = student1.GetStudentId();
             string choreType = ChoreType.Text;
@@ -334,21 +256,42 @@ namespace StudentHouses
             int responsibleID = dbHelper.GetStudentIdByName(StudentsComboBox.Text);
             string creatorName = student1.GetStudent();
 
-
             if (TCstudchores.Checked)
             {
+                int choreID = dbHelper.GetLastInsertedChoreId() + 1;
+
+                Chores newChore = new Chores(
+                    choreID,               
+                    creatorID,             
+                    creatorName,          
+                    choreType,             
+                    choreText,             
+                    choreText,           
+                    choreType,         
+                    responsibleID        
+                );
+
+                chores.Add(newChore);
+
                 dbHelper.AddChore(creatorID, creatorName, choreType, choreText, responsibleID);
+
+
+                UpdateChores();
+
                 MessageBox.Show("Chore added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                //MessageBox.Show($"{creatorID},{choreType}, {choreText}, {responsibleID}");
             }
             else
             {
-                MessageBox.Show("Please accept our terms and services to add a Chore.", "Accetp our T&C!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please accept our terms and services to add a Chore.", "Accept our T&C!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+            UpdateChores();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             UpdateChores();
         }
@@ -364,3 +307,4 @@ namespace StudentHouses
         }
     }
 }
+
