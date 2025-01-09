@@ -13,7 +13,6 @@ namespace StudentHouses
         int StudentID;
         int month, year;
         Studentcs student1;
-        List<Complaints> complaintList = new List<Complaints>();
         List<Chores> chores = new List<Chores>();
         DatabaseHelper dbHelper = new DatabaseHelper();
 
