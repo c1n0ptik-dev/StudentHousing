@@ -491,10 +491,12 @@ namespace StudentHouses
                     {
                         while (reader.Read())
                         {
+                            Studentcs studentS = new Studentcs(reader.GetString(2));
+
                             var chore = new Chores(
                                 choreID: reader.GetInt32(0),
                                 creatorID: reader.GetInt32(1),
-                                creatorName: reader.GetString(2),
+                                student: studentS,
                                 choreTitle: reader.GetString(3),
                                 choreBody: reader.GetString(4),
                                 responsibleID: reader.GetInt32(5)

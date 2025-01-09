@@ -13,7 +13,7 @@ namespace StudentHouses
         public int CreatorID { get; set; }
 
         [DataMember]
-        public string CreatorName { get; set; }
+        public Studentcs studentName { get; set; }
 
         [DataMember]
         public string ChoreTitle { get; set; }
@@ -30,11 +30,11 @@ namespace StudentHouses
         [DataMember]
         public int ResponsibleID { get; set; }
 
-        public Chores(int choreID, int creatorID, string creatorName, string choreTitle, string choreBody, string choreText = "", string choreType = "", int responsibleID = 0)
+        public Chores(int choreID, int creatorID, Studentcs student, string choreTitle, string choreBody, string choreText = "", string choreType = "", int responsibleID = 0)
         {
             ChoreID = choreID;
             CreatorID = creatorID;
-            CreatorName = creatorName;
+            studentName = student;
             ChoreTitle = choreTitle;
             ChoreBody = choreBody;
             ChoreText = choreText; 
@@ -44,7 +44,7 @@ namespace StudentHouses
 
         public string GetCreatorInfo()
         {
-            return $"{CreatorName}";
+            return $"{studentName}";
         }
 
         public string GetChoreDetails()

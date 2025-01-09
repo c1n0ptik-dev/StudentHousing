@@ -20,7 +20,7 @@ namespace StudentHouses
 {
     public partial class AdminForm : Form
     {
-        private Complaints submittedComplains;
+        
 
         private DatabaseHelper dbHelper;
 

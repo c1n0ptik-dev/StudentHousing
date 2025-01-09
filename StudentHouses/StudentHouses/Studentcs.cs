@@ -31,10 +31,6 @@ namespace StudentHouses
             this.bannedForComplaints = ComplaintsBan;
         }
 
-        public string GetStudentEmail()
-        {
-            return studentEmail;
-        }
 
         public Studentcs(string nameSS)
         {

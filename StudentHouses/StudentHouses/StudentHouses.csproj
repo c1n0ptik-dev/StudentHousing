@@ -315,7 +315,6 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Announcements.cs" />
     <Compile Include="Chores.cs" />
     <Compile Include="complaints.cs" />
     <Compile Include="DatabaseHelper.cs" />
