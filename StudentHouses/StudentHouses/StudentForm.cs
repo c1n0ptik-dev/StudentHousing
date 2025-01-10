@@ -250,7 +250,8 @@ namespace StudentHouses
                 int choreID = dbHelper.GetLastInsertedChoreId() + 1;
 
                 Chores newChore = new Chores(
-                    choreID,                          
+                    choreID,
+                    student1.GetStudentId(),
                     student1,          
                     choreType,             
                     choreText,             

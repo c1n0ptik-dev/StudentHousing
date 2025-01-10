@@ -153,5 +153,10 @@ namespace StudentHouses
         {
             updateComplaints();
         }
+
+        private void UsernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

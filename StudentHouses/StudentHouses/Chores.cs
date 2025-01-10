@@ -30,10 +30,10 @@ namespace StudentHouses
         [DataMember]
         public int ResponsibleID { get; set; }
 
-        public Chores(int choreID, Studentcs student, string choreTitle, string choreBody, string choreText = "", string choreType = "", int responsibleID = 0)
+        public Chores(int choreID, int studentId, Studentcs student, string choreTitle, string choreBody, string choreText = "", string choreType = "", int responsibleID = 0)
         {
             ChoreID = choreID;
-            CreatorID = student.GetStudentId();
+            CreatorID = studentId;
             studentName = student;
             ChoreTitle = choreTitle;
             ChoreBody = choreBody;

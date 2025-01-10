@@ -52,7 +52,7 @@
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 65);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(147, 60);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(147, 57);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // UserControlDays

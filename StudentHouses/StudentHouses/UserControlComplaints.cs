@@ -20,9 +20,9 @@ namespace StudentHouses
         {
             InitializeComponent();
             complaintid = complain.GetComplaintID();
-            complaintCreatorID = complain.CreatorID;
+            complaintCreatorID = complain.GetCreatorId();
 
-            nameLabel.Text = $"{complain.student} (ID: {complain.CreatorID})";
+            nameLabel.Text = $"{complain.student} (ID: {complain.GetCreatorId()})";
             textBox1.Text = complain.GetComplain();
 
 

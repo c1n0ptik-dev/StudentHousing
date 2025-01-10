@@ -215,7 +215,8 @@ namespace StudentHouses
                                 Studentcs student = new Studentcs(reader.GetString(1));
                                 Complaints complaint = new Complaints(
                                     reader.GetInt32(0),  
-                                    student,              
+                                    student,     
+                                    reader.GetInt32(2),
                                     reader.GetString(3)  
                                 );
 
@@ -487,6 +488,7 @@ namespace StudentHouses
 
                             var chore = new Chores(
                                 choreID: reader.GetInt32(0),
+                                studentId: reader.GetInt32(1),
                                 student: studentS,
                                 choreTitle: reader.GetString(3),
                                 choreBody: reader.GetString(4),

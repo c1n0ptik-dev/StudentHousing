@@ -15,17 +15,22 @@ namespace StudentHouses
         [DataMember]
         public string ComplaintText { get; set; } 
 
-        public Complaints(int complaintID, Studentcs students, string complaintText)
+        public Complaints(int complaintID, Studentcs students, int studentid, string complaintText)
         {
             ComplaintID = complaintID;
             student = students;
-            CreatorID = student.GetStudentId();
+            CreatorID = studentid;
             ComplaintText = complaintText;
         }
 
         public string GetComplain()
         {
             return ComplaintText;
+        }
+
+        public int GetCreatorId()
+        {
+            return CreatorID;
         }
 
         public int GetComplaintID()

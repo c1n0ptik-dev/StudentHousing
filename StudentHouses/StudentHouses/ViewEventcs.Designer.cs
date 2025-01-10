@@ -56,7 +56,7 @@
             this.Event.Controls.Add(this.Title);
             this.Event.Location = new System.Drawing.Point(12, 12);
             this.Event.Name = "Event";
-            this.Event.Size = new System.Drawing.Size(728, 340);
+            this.Event.Size = new System.Drawing.Size(728, 330);
             this.Event.TabIndex = 0;
             this.Event.TabStop = false;
             this.Event.Text = "Event View";
@@ -66,7 +66,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblTitle.Location = new System.Drawing.Point(378, 41);
+            this.lblTitle.Location = new System.Drawing.Point(377, 42);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(70, 26);
             this.lblTitle.TabIndex = 9;
@@ -76,7 +76,7 @@
             // 
             this.lblR.AutoSize = true;
             this.lblR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblR.Location = new System.Drawing.Point(625, 98);
+            this.lblR.Location = new System.Drawing.Point(619, 98);
             this.lblR.Name = "lblR";
             this.lblR.Size = new System.Drawing.Size(70, 26);
             this.lblR.TabIndex = 8;
@@ -86,7 +86,7 @@
             // 
             this.lblOrg.AutoSize = true;
             this.lblOrg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblOrg.Location = new System.Drawing.Point(404, 98);
+            this.lblOrg.Location = new System.Drawing.Point(399, 99);
             this.lblOrg.Name = "lblOrg";
             this.lblOrg.Size = new System.Drawing.Size(70, 26);
             this.lblOrg.TabIndex = 7;
@@ -105,7 +105,7 @@
             // textBox
             // 
             this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.textBox.Location = new System.Drawing.Point(45, 229);
+            this.textBox.Location = new System.Drawing.Point(39, 210);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
             this.textBox.ReadOnly = true;
@@ -116,7 +116,7 @@
             // 
             this.lblDesc.AutoSize = true;
             this.lblDesc.Font = new System.Drawing.Font("Microsoft YaHei", 11F, System.Drawing.FontStyle.Bold);
-            this.lblDesc.Location = new System.Drawing.Point(50, 184);
+            this.lblDesc.Location = new System.Drawing.Point(50, 161);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(146, 30);
             this.lblDesc.TabIndex = 4;
@@ -126,7 +126,7 @@
             // 
             this.lblRoom.AutoSize = true;
             this.lblRoom.Font = new System.Drawing.Font("Microsoft YaHei", 11F, System.Drawing.FontStyle.Bold);
-            this.lblRoom.Location = new System.Drawing.Point(535, 94);
+            this.lblRoom.Location = new System.Drawing.Point(529, 94);
             this.lblRoom.Name = "lblRoom";
             this.lblRoom.Size = new System.Drawing.Size(84, 30);
             this.lblRoom.TabIndex = 3;
@@ -136,7 +136,7 @@
             // 
             this.lblOrganizer.AutoSize = true;
             this.lblOrganizer.Font = new System.Drawing.Font("Microsoft YaHei", 11F, System.Drawing.FontStyle.Bold);
-            this.lblOrganizer.Location = new System.Drawing.Point(270, 94);
+            this.lblOrganizer.Location = new System.Drawing.Point(265, 95);
             this.lblOrganizer.Name = "lblOrganizer";
             this.lblOrganizer.Size = new System.Drawing.Size(128, 30);
             this.lblOrganizer.TabIndex = 2;
@@ -156,7 +156,7 @@
             // 
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold);
-            this.Title.Location = new System.Drawing.Point(289, 35);
+            this.Title.Location = new System.Drawing.Point(288, 36);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(80, 34);
             this.Title.TabIndex = 0;
@@ -166,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 367);
+            this.ClientSize = new System.Drawing.Size(763, 355);
             this.Controls.Add(this.Event);
             this.Name = "ViewEventcs";
             this.Text = "ViewEventcs";
