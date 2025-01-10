@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.logout = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.lblMandY = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
@@ -100,7 +101,6 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.logout = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -159,6 +159,18 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Schedule";
             // 
+            // logout
+            // 
+            this.logout.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logout.ForeColor = System.Drawing.Color.Black;
+            this.logout.Location = new System.Drawing.Point(21, 28);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(143, 39);
+            this.logout.TabIndex = 15;
+            this.logout.Text = "Logout";
+            this.logout.UseVisualStyleBackColor = true;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Bold);
@@ -169,6 +181,7 @@
             this.button4.TabIndex = 14;
             this.button4.Text = "↻";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // lblMandY
             // 
@@ -922,18 +935,6 @@
             this.button3.Text = "Submit";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // logout
-            // 
-            this.logout.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.logout.ForeColor = System.Drawing.Color.Black;
-            this.logout.Location = new System.Drawing.Point(21, 28);
-            this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(143, 39);
-            this.logout.TabIndex = 15;
-            this.logout.Text = "Logout";
-            this.logout.UseVisualStyleBackColor = true;
-            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // StudentForm
             // 

@@ -15,11 +15,11 @@ namespace StudentHouses
         [DataMember]
         public string ComplaintText { get; set; } 
 
-        public Complaints(int complaintID, Studentcs students, int creatorID, string complaintText)
+        public Complaints(int complaintID, Studentcs students, string complaintText)
         {
             ComplaintID = complaintID;
             student = students;
-            CreatorID = creatorID;
+            CreatorID = student.GetStudentId();
             ComplaintText = complaintText;
         }
 

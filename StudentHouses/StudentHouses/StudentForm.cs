@@ -250,8 +250,7 @@ namespace StudentHouses
                 int choreID = dbHelper.GetLastInsertedChoreId() + 1;
 
                 Chores newChore = new Chores(
-                    choreID,               
-                    creatorID,             
+                    choreID,                          
                     student1,          
                     choreType,             
                     choreText,             
@@ -289,6 +288,12 @@ namespace StudentHouses
         private void logout_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            daysContainer.Controls.Clear();
+            Displays();
         }
 
         public int GetStaticMonth()

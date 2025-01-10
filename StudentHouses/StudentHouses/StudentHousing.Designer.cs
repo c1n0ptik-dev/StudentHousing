@@ -1,6 +1,6 @@
 ﻿namespace StudentHouses
 {
-    partial class Form1
+    partial class StudentHousing
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentHousing));
             this.loginButton = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TCcheck = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.showPassword = new System.Windows.Forms.CheckBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.loginBox = new System.Windows.Forms.TextBox();
-            this.TCcheck = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +47,7 @@
             this.loginButton.BackColor = System.Drawing.Color.Navy;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.loginButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.loginButton.Location = new System.Drawing.Point(163, 554);
+            this.loginButton.Location = new System.Drawing.Point(159, 572);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(199, 49);
             this.loginButton.TabIndex = 3;
@@ -90,6 +90,17 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
+            // TCcheck
+            // 
+            this.TCcheck.AutoSize = true;
+            this.TCcheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.TCcheck.Location = new System.Drawing.Point(123, 495);
+            this.TCcheck.Name = "TCcheck";
+            this.TCcheck.Size = new System.Drawing.Size(189, 21);
+            this.TCcheck.TabIndex = 10;
+            this.TCcheck.Text = "I accept t&c of this service";
+            this.TCcheck.UseVisualStyleBackColor = true;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -104,7 +115,7 @@
             // 
             this.showPassword.AutoSize = true;
             this.showPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.showPassword.Location = new System.Drawing.Point(123, 518);
+            this.showPassword.Location = new System.Drawing.Point(123, 527);
             this.showPassword.Name = "showPassword";
             this.showPassword.Size = new System.Drawing.Size(156, 21);
             this.showPassword.TabIndex = 9;
@@ -133,24 +144,14 @@
             this.loginBox.Size = new System.Drawing.Size(269, 35);
             this.loginBox.TabIndex = 7;
             // 
-            // TCcheck
-            // 
-            this.TCcheck.AutoSize = true;
-            this.TCcheck.Location = new System.Drawing.Point(123, 486);
-            this.TCcheck.Name = "TCcheck";
-            this.TCcheck.Size = new System.Drawing.Size(209, 24);
-            this.TCcheck.TabIndex = 10;
-            this.TCcheck.Text = "I accept t&c of this service";
-            this.TCcheck.UseVisualStyleBackColor = true;
-            // 
-            // Form1
+            // StudentHousing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1254, 838);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "StudentHousing";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

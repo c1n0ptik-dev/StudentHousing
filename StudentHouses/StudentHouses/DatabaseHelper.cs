@@ -152,7 +152,7 @@ namespace StudentHouses
                                 int id = reader.GetInt32(0);
                                 string name = reader.GetString(1);
                                 int roomNumber = reader.GetInt32(2);
-                                string email = reader.IsDBNull(3) ? null : reader.GetString(3); // Handle NULL emails
+                                string email = reader.IsDBNull(3) ? null : reader.GetString(3); 
                                 bool banned = reader.GetBoolean(4);
 
                                 return (id, name, roomNumber, email, banned);
@@ -215,8 +215,7 @@ namespace StudentHouses
                                 Studentcs student = new Studentcs(reader.GetString(1));
                                 Complaints complaint = new Complaints(
                                     reader.GetInt32(0),  
-                                    student,             
-                                    reader.GetInt32(2), 
+                                    student,              
                                     reader.GetString(3)  
                                 );
 
@@ -245,10 +244,10 @@ namespace StudentHouses
 
                     using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                     {
-                        // Ensure the parameter is added correctly
+                        
                         cmd.Parameters.AddWithValue("@complaintid", complaintID);
 
-                        // Check the number of rows affected to confirm deletion
+                       
                         int rowsAffected = cmd.ExecuteNonQuery();
 
                         if (rowsAffected == 0)
@@ -488,7 +487,6 @@ namespace StudentHouses
 
                             var chore = new Chores(
                                 choreID: reader.GetInt32(0),
-                                creatorID: reader.GetInt32(1),
                                 student: studentS,
                                 choreTitle: reader.GetString(3),
                                 choreBody: reader.GetString(4),

@@ -13,11 +13,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace StudentHouses
 {
-    public partial class Form1 : Form
+    public partial class StudentHousing : Form
     {
         private DatabaseHelper dbHelper;
 
-        public Form1()
+        public StudentHousing()
         {
             InitializeComponent();
             dbHelper = new DatabaseHelper();

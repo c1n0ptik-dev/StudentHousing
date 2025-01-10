@@ -35,9 +35,10 @@
             // 
             // ChoreDone
             // 
-            this.ChoreDone.Location = new System.Drawing.Point(9, 100);
+            this.ChoreDone.Location = new System.Drawing.Point(14, 154);
+            this.ChoreDone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChoreDone.Name = "ChoreDone";
-            this.ChoreDone.Size = new System.Drawing.Size(272, 23);
+            this.ChoreDone.Size = new System.Drawing.Size(408, 35);
             this.ChoreDone.TabIndex = 8;
             this.ChoreDone.Text = "Done!";
             this.ChoreDone.UseVisualStyleBackColor = true;
@@ -45,33 +46,37 @@
             // 
             // ChoreText
             // 
-            this.ChoreText.Location = new System.Drawing.Point(9, 36);
+            this.ChoreText.Location = new System.Drawing.Point(14, 55);
+            this.ChoreText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChoreText.Multiline = true;
             this.ChoreText.Name = "ChoreText";
+            this.ChoreText.ReadOnly = true;
             this.ChoreText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.ChoreText.Size = new System.Drawing.Size(272, 57);
+            this.ChoreText.Size = new System.Drawing.Size(406, 86);
             this.ChoreText.TabIndex = 7;
             // 
             // ChoreTitle
             // 
             this.ChoreTitle.AutoSize = true;
             this.ChoreTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ChoreTitle.Location = new System.Drawing.Point(5, 7);
+            this.ChoreTitle.Location = new System.Drawing.Point(8, 11);
+            this.ChoreTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ChoreTitle.Name = "ChoreTitle";
-            this.ChoreTitle.Size = new System.Drawing.Size(51, 20);
+            this.ChoreTitle.Size = new System.Drawing.Size(79, 29);
             this.ChoreTitle.TabIndex = 6;
             this.ChoreTitle.Text = "label1";
             // 
             // UserControlChore
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.ChoreDone);
             this.Controls.Add(this.ChoreText);
             this.Controls.Add(this.ChoreTitle);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UserControlChore";
-            this.Size = new System.Drawing.Size(287, 130);
+            this.Size = new System.Drawing.Size(430, 200);
             this.ResumeLayout(false);
             this.PerformLayout();
 
