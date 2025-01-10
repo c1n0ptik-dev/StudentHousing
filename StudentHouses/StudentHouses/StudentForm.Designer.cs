@@ -45,12 +45,10 @@
             this.daysContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.anonymousCheckBox = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtComplain = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.AcceptTC = new System.Windows.Forms.CheckBox();
             this.loginButton = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -84,7 +82,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.checkBox = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -102,8 +99,8 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.TCstudchores = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.logout = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -131,7 +128,7 @@
             this.tabControl1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.tabControl1.ItemSize = new System.Drawing.Size(100, 29);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1455, 1258);
@@ -141,6 +138,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Azure;
+            this.tabPage1.Controls.Add(this.logout);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.lblMandY);
             this.tabPage1.Controls.Add(this.btnBack);
@@ -156,7 +154,7 @@
             this.tabPage1.ForeColor = System.Drawing.Color.Azure;
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1447, 1221);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Schedule";
@@ -302,7 +300,7 @@
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1447, 1221);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Complaints";
@@ -310,30 +308,16 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.anonymousCheckBox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtComplain);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.AcceptTC);
             this.groupBox1.Controls.Add(this.loginButton);
             this.groupBox1.Location = new System.Drawing.Point(63, 140);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1318, 751);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            // 
-            // anonymousCheckBox
-            // 
-            this.anonymousCheckBox.AutoSize = true;
-            this.anonymousCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.anonymousCheckBox.Location = new System.Drawing.Point(362, 612);
-            this.anonymousCheckBox.Name = "anonymousCheckBox";
-            this.anonymousCheckBox.Size = new System.Drawing.Size(200, 26);
-            this.anonymousCheckBox.TabIndex = 15;
-            this.anonymousCheckBox.Text = "Make it anaonymous";
-            this.anonymousCheckBox.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.anonymousCheckBox.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -373,24 +357,12 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Complaint form";
             // 
-            // AcceptTC
-            // 
-            this.AcceptTC.AutoSize = true;
-            this.AcceptTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AcceptTC.Location = new System.Drawing.Point(36, 612);
-            this.AcceptTC.Name = "AcceptTC";
-            this.AcceptTC.Size = new System.Drawing.Size(309, 26);
-            this.AcceptTC.TabIndex = 10;
-            this.AcceptTC.Text = "I accept the Terms and Conditions";
-            this.AcceptTC.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.AcceptTC.UseVisualStyleBackColor = true;
-            // 
             // loginButton
             // 
             this.loginButton.BackColor = System.Drawing.Color.Navy;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.loginButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.loginButton.Location = new System.Drawing.Point(494, 669);
+            this.loginButton.Location = new System.Drawing.Point(494, 640);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(316, 58);
             this.loginButton.TabIndex = 3;
@@ -628,7 +600,6 @@
             this.groupBox3.Controls.Add(this.label27);
             this.groupBox3.Controls.Add(this.label28);
             this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.checkBox);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Location = new System.Drawing.Point(56, 78);
             this.groupBox3.Name = "groupBox3";
@@ -744,24 +715,12 @@
             this.label29.TabIndex = 11;
             this.label29.Text = "Book The Space";
             // 
-            // checkBox
-            // 
-            this.checkBox.AutoSize = true;
-            this.checkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox.Location = new System.Drawing.Point(38, 772);
-            this.checkBox.Name = "checkBox";
-            this.checkBox.Size = new System.Drawing.Size(309, 26);
-            this.checkBox.TabIndex = 10;
-            this.checkBox.Text = "I accept the Terms and Conditions";
-            this.checkBox.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBox.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Navy;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(468, 806);
+            this.button2.Location = new System.Drawing.Point(468, 789);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(316, 58);
             this.button2.TabIndex = 3;
@@ -797,7 +756,7 @@
             this.tabPage7.Controls.Add(this.ChoresContainer);
             this.tabPage7.Location = new System.Drawing.Point(4, 33);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage7.Size = new System.Drawing.Size(1440, 1078);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "My Chores";
@@ -844,7 +803,7 @@
             this.tabPage6.ForeColor = System.Drawing.Color.Azure;
             this.tabPage6.Location = new System.Drawing.Point(4, 33);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(1440, 1078);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "Add Student Chore";
@@ -860,7 +819,6 @@
             this.groupBox4.Controls.Add(this.label36);
             this.groupBox4.Controls.Add(this.label37);
             this.groupBox4.Controls.Add(this.label38);
-            this.groupBox4.Controls.Add(this.TCstudchores);
             this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox4.Location = new System.Drawing.Point(62, 126);
@@ -952,30 +910,30 @@
             this.label38.TabIndex = 11;
             this.label38.Text = "Add Student Chores";
             // 
-            // TCstudchores
-            // 
-            this.TCstudchores.AutoSize = true;
-            this.TCstudchores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TCstudchores.Location = new System.Drawing.Point(36, 600);
-            this.TCstudchores.Name = "TCstudchores";
-            this.TCstudchores.Size = new System.Drawing.Size(309, 26);
-            this.TCstudchores.TabIndex = 10;
-            this.TCstudchores.Text = "I accept the Terms and Conditions";
-            this.TCstudchores.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.TCstudchores.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Navy;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(494, 638);
+            this.button3.Location = new System.Drawing.Point(494, 637);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(316, 58);
             this.button3.TabIndex = 3;
             this.button3.Text = "Submit";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // logout
+            // 
+            this.logout.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logout.ForeColor = System.Drawing.Color.Black;
+            this.logout.Location = new System.Drawing.Point(21, 28);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(143, 39);
+            this.logout.TabIndex = 15;
+            this.logout.Text = "Logout";
+            this.logout.UseVisualStyleBackColor = true;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // StudentForm
             // 
@@ -985,6 +943,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StudentForm_FormClosed);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1021,10 +980,8 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox AcceptTC;
         private System.Windows.Forms.TextBox txtComplain;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox anonymousCheckBox;
         private System.Windows.Forms.FlowLayoutPanel daysContainer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
@@ -1054,7 +1011,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.CheckBox checkBox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox descBox;
@@ -1076,7 +1032,6 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.CheckBox TCstudchores;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.ComboBox roomUsed1;
@@ -1086,5 +1041,6 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.FlowLayoutPanel ChoresContainer;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button logout;
     }
 }

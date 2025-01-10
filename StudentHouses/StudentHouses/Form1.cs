@@ -35,26 +35,38 @@ namespace StudentHouses
             string username = loginBox.Text.Trim();
             string password = passwordBox.Text.Trim();
 
-            if (dbHelper.VerifyUser(username, password))
+            passwordBox.Text = string.Empty;
+            loginBox.Text = string.Empty;
+            showPassword.Checked = false;
+
+            if (TCcheck.Checked)
             {
-                if (dbHelper.VerifyAdmin(username, password))
+                if (dbHelper.VerifyUser(username, password))
                 {
-                    AdminForm admin = new AdminForm();
-                    admin.Show();
-                    this.Hide();
+                    if (dbHelper.VerifyAdmin(username, password))
+                    {
+                        AdminForm admin = new AdminForm();
+                        admin.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        int studentID = dbHelper.GetStudetnID(username, password);
+                        StudentForm student = new StudentForm(studentID, this);
+                        student.Show();
+                        this.WindowState = FormWindowState.Minimized;
+                    }
                 }
                 else
                 {
-                    int studentID = dbHelper.GetStudetnID(username, password);
-                    StudentForm student = new StudentForm(studentID);
-                    student.Show();
-                    this.Hide();
+                    MessageBox.Show("Access denied!");
                 }
-            }
-            else
+            } else
             {
-                MessageBox.Show("Access denied!");
+                MessageBox.Show("Accept the terms and services!");
             }
+
+            TCcheck.Checked = false;
         }
 
         private void passwordBox_TextChanged(object sender, EventArgs e)

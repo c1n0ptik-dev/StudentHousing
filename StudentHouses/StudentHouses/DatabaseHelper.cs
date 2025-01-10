@@ -169,7 +169,7 @@ namespace StudentHouses
             return null;
         }
 
-        public void AddComplaint(string creatorName, int creatorId, string complain, bool isanonymous)
+        public void AddComplaint(string creatorName, int creatorId, string complain)
         {
             try{
                 using (SQLiteConnection conn = new SQLiteConnection(connectionString))
@@ -187,14 +187,7 @@ namespace StudentHouses
                         cmd.ExecuteNonQuery();
                     }
                 }
-                if (isanonymous)
-                {
-                    MessageBox.Show("Anonymous complaint is submited");
-                }
-                else
-                {
                     MessageBox.Show("Complaint is submited");
-                }
             }
             catch (Exception ex)
             {

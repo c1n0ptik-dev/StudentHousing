@@ -37,6 +37,7 @@
             this.showPassword = new System.Windows.Forms.CheckBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.loginBox = new System.Windows.Forms.TextBox();
+            this.TCcheck = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +47,7 @@
             this.loginButton.BackColor = System.Drawing.Color.Navy;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.loginButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.loginButton.Location = new System.Drawing.Point(163, 572);
+            this.loginButton.Location = new System.Drawing.Point(163, 554);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(199, 49);
             this.loginButton.TabIndex = 3;
@@ -57,7 +58,7 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(119, 365);
+            this.label.Location = new System.Drawing.Point(119, 339);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(48, 20);
             this.label.TabIndex = 5;
@@ -66,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(119, 444);
+            this.label1.Location = new System.Drawing.Point(119, 418);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 6;
@@ -75,6 +76,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.TCcheck);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.showPassword);
             this.groupBox1.Controls.Add(this.passwordBox);
@@ -102,7 +104,7 @@
             // 
             this.showPassword.AutoSize = true;
             this.showPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.showPassword.Location = new System.Drawing.Point(123, 508);
+            this.showPassword.Location = new System.Drawing.Point(123, 518);
             this.showPassword.Name = "showPassword";
             this.showPassword.Size = new System.Drawing.Size(156, 21);
             this.showPassword.TabIndex = 9;
@@ -114,7 +116,7 @@
             // passwordBox
             // 
             this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.passwordBox.Location = new System.Drawing.Point(123, 467);
+            this.passwordBox.Location = new System.Drawing.Point(123, 441);
             this.passwordBox.Multiline = true;
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
@@ -125,11 +127,21 @@
             // loginBox
             // 
             this.loginBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.loginBox.Location = new System.Drawing.Point(123, 388);
+            this.loginBox.Location = new System.Drawing.Point(123, 362);
             this.loginBox.Multiline = true;
             this.loginBox.Name = "loginBox";
             this.loginBox.Size = new System.Drawing.Size(269, 35);
             this.loginBox.TabIndex = 7;
+            // 
+            // TCcheck
+            // 
+            this.TCcheck.AutoSize = true;
+            this.TCcheck.Location = new System.Drawing.Point(123, 486);
+            this.TCcheck.Name = "TCcheck";
+            this.TCcheck.Size = new System.Drawing.Size(209, 24);
+            this.TCcheck.TabIndex = 10;
+            this.TCcheck.Text = "I accept t&c of this service";
+            this.TCcheck.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -156,6 +168,7 @@
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.CheckBox showPassword;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.CheckBox TCcheck;
     }
 }
 

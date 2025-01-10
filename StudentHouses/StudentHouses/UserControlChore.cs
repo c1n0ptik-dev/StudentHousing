@@ -30,8 +30,6 @@ namespace StudentHouses
 
         private void ChoreDone_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Convert.ToString(ChoreId));
-
             try
             {
                 dbHelper.DeleteChore(ChoreId);
