@@ -289,7 +289,7 @@ namespace StudentHouses
                         cmd.ExecuteNonQuery();
                     }
                 }
-                MessageBox.Show("Complaint is succesfully added.");
+                MessageBox.Show("Space is booked successfully");
             }
             catch (Exception ex)
             {
