@@ -872,7 +872,8 @@
             "Cleaning carpets",
             "Cooking dinner",
             "Cleaning bathrooms",
-            "Clean all kitchen countertops"});
+            "Clean all kitchen countertops",
+            "Pay for the item (Specify in description)"});
             this.ChoreType.Location = new System.Drawing.Point(38, 188);
             this.ChoreType.Name = "ChoreType";
             this.ChoreType.Size = new System.Drawing.Size(482, 32);

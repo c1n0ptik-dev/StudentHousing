@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|d:\\studenthousing\\studenthousingbv\\studenthouses\\studenthouses\\complaints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\complaints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|d:\\studenthousing\\studenthousingbv\\studenthouses\\studenthouses\\studentform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\studentform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|D:\\studenthousing\\studenthousingbv\\StudentHouses\\studenthouses\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|d:\\studenthousing\\studenthousingbv\\studenthouses\\studenthouses\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|D:\\studenthousing\\studenthousingbv\\StudentHouses\\studenthouses\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|D:\\studenthousing\\studenthousingbv\\StudentHouses\\studenthouses\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|D:\\studenthousing\\studenthousingbv\\StudentHouses\\studenthouses\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\studentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|D:\\studenthousing\\studenthousingbv\\StudentHouses\\studenthouses\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|D:\\studenthousing\\studenthousingbv\\StudentHouses\\studenthouses\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|D:\\studenthousing\\studenthousingbv\\StudentHouses\\studenthouses\\complaints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\complaints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|D:\\studenthousing\\studenthousingbv\\StudentHouses\\studenthouses\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -49,14 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|D:\\studenthousing\\studenthousingbv\\StudentHouses\\studenthouses\\studentcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\studentcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|D:\\studenthousing\\studenthousingbv\\StudentHouses\\studenthouses\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|D:\\studenthousing\\studenthousingbv\\StudentHouses\\studenthouses\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|solutionrelative:studenthouses\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DDC1F6E-B949-45F3-B38B-DA345F692ACB}|StudentHouses\\StudentHouses.csproj|D:\\studenthousing\\studenthousingbv\\StudentHouses\\studenthouses\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,24 +102,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "StudentHouses\\DatabaseHelper.cs",
               "ToolTip": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\DatabaseHelper.cs",
               "RelativeToolTip": "StudentHouses\\DatabaseHelper.cs",
-              "ViewState": "AgIAAOUBAAAAAAAAAAAswPIBAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAMBAAAAAAAAAAAuwCABAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T19:48:10.003Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "StudentForm.cs [Design]",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\StudentForm.cs",
               "RelativeDocumentMoniker": "StudentHouses\\StudentForm.cs",
@@ -123,24 +127,25 @@
               "RelativeToolTip": "StudentHouses\\StudentForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T11:30:12.488Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "StudentForm.cs",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\StudentForm.cs",
               "RelativeDocumentMoniker": "StudentHouses\\StudentForm.cs",
-              "ToolTip": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\StudentForm.cs",
-              "RelativeToolTip": "StudentHouses\\StudentForm.cs",
-              "ViewState": "AgIAANwAAAAAAAAAAAAwwP0AAAArAAAAAAAAAA==",
+              "ToolTip": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\StudentForm.cs*",
+              "RelativeToolTip": "StudentHouses\\StudentForm.cs*",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAuwLUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T12:50:59.061Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Event.cs",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\Event.cs",
               "RelativeDocumentMoniker": "StudentHouses\\Event.cs",
@@ -164,19 +169,6 @@
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "complaints.cs",
-              "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\complaints.cs",
-              "RelativeDocumentMoniker": "StudentHouses\\complaints.cs",
-              "ToolTip": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\complaints.cs",
-              "RelativeToolTip": "StudentHouses\\complaints.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T16:04:41.138Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
@@ -186,7 +178,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
+              "Title": "StudentForm.Designer.cs",
+              "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\StudentForm.Designer.cs",
+              "RelativeDocumentMoniker": "StudentHouses\\StudentForm.Designer.cs",
+              "ToolTip": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\StudentForm.Designer.cs",
+              "RelativeToolTip": "StudentHouses\\StudentForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T12:46:38.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "complaints.cs",
+              "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\complaints.cs",
+              "RelativeDocumentMoniker": "StudentHouses\\complaints.cs",
+              "ToolTip": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\complaints.cs",
+              "RelativeToolTip": "StudentHouses\\complaints.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:04:41.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\Program.cs",
               "RelativeDocumentMoniker": "StudentHouses\\Program.cs",
@@ -198,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "UserControlChore.cs [Design]",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\UserControlChore.cs",
               "RelativeDocumentMoniker": "StudentHouses\\UserControlChore.cs",
@@ -209,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Chores.cs",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\Chores.cs",
               "RelativeDocumentMoniker": "StudentHouses\\Chores.cs",
@@ -221,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "ViewEventcs.cs",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\ViewEventcs.cs",
               "RelativeDocumentMoniker": "StudentHouses\\ViewEventcs.cs",
@@ -233,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "ViewEventcs.cs [Design]",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\ViewEventcs.cs",
               "RelativeDocumentMoniker": "StudentHouses\\ViewEventcs.cs",
@@ -244,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "UserControlPanel.cs",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\UserControlPanel.cs",
               "RelativeDocumentMoniker": "StudentHouses\\UserControlPanel.cs",
@@ -256,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "UserControlComplaints.cs [Design]",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\UserControlComplaints.cs",
               "RelativeDocumentMoniker": "StudentHouses\\UserControlComplaints.cs",
@@ -267,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "UserControlComplaints.cs",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\UserControlComplaints.cs",
               "RelativeDocumentMoniker": "StudentHouses\\UserControlComplaints.cs",
@@ -279,19 +296,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "AdminForm.cs",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\AdminForm.cs",
               "RelativeDocumentMoniker": "StudentHouses\\AdminForm.cs",
               "ToolTip": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\AdminForm.cs",
               "RelativeToolTip": "StudentHouses\\AdminForm.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwJ4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAA+wC4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T16:45:03.3Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "AdminForm.cs [Design]",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\AdminForm.cs",
               "RelativeDocumentMoniker": "StudentHouses\\AdminForm.cs",
@@ -302,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "packages.config",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\packages.config",
               "RelativeDocumentMoniker": "StudentHouses\\packages.config",
@@ -314,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "UserControlDays.cs",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\UserControlDays.cs",
               "RelativeDocumentMoniker": "StudentHouses\\UserControlDays.cs",
@@ -326,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "UserControlDays.cs [Design]",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\UserControlDays.cs",
               "RelativeDocumentMoniker": "StudentHouses\\UserControlDays.cs",
@@ -337,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Studentcs.cs",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\Studentcs.cs",
               "RelativeDocumentMoniker": "StudentHouses\\Studentcs.cs",
@@ -349,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "UserControlPanel.cs [Design]",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\UserControlPanel.cs",
               "RelativeDocumentMoniker": "StudentHouses\\UserControlPanel.cs",
@@ -360,7 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "StudentHousing.cs",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\StudentHousing.cs",
               "RelativeDocumentMoniker": "StudentHouses\\StudentHousing.cs",
@@ -372,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "StudentHousing.cs [Design]",
               "DocumentMoniker": "D:\\studenthousing\\studenthousingbv\\StudentHouses\\StudentHouses\\StudentHousing.cs",
               "RelativeDocumentMoniker": "StudentHouses\\StudentHousing.cs",
